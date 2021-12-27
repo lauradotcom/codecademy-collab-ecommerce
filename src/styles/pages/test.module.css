@@ -1,0 +1,11 @@
+.main_image {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+}
+.image_caption {
+  font-size: 12px;
+}
+.paragraph_content {
+  color: red;
+}
