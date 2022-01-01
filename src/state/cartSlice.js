@@ -43,7 +43,7 @@ export const cartSlice = createSlice({
       );
       const existingCartItem = state.items[existingCartItemIndex];
       const updatedTotalAmount = state.totalAmount - existingCartItem.price;
-      const updatedTotalCount = state.totalCount + action.item.amount;
+      const updatedTotalCount = state.totalCount - 1;
       let updatedItems;
       if (existingCartItem.amount === 1) {
         updatedItems = state.items.filter((item) => item.id !== action.id);
