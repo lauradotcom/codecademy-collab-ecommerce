@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import Header from '../../components/Layout/Header';
 import * as testPageStyles from './testPage.module.css';
 
 const image1 = '../../images/product1-1.png';

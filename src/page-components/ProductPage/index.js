@@ -1,6 +1,5 @@
 import * as React from 'react';
 // components
-import Header from '../../components/Layout/Header';
 // page sections
 import ProductImage from './Sections/ProductImage';
 import ProductDetails from './Sections/ProductDetails';
