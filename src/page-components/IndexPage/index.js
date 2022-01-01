@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import Header from '../../components/Layout/Header';
 import * as styles from './IndexPage.module.css';
 
 // data
@@ -24,7 +23,6 @@ const IndexPage = () => {
   return (
     <>
       <title>Home Page</title>
-      <Header />
       <main className={styles.main}>
         <h1 className={styles.heading}>
           Home Page

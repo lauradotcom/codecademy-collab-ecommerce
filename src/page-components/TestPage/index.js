@@ -70,7 +70,6 @@ const TestPage = () => {
   return (
     <>
       <title>Test Page</title>
-      <Header />
       <main style={pageStyles}>
         <h1 style={headingStyles}>
           <span style={headingAccentStyles}>Test Page</span>

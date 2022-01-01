@@ -14,7 +14,6 @@ const ProductPage = () => {
   return (
     <>
       <title>Product Page</title>
-      <Header />
       <main className={main}>
         <ProductImage image={image1} />
         <div className={rightColumn}>
