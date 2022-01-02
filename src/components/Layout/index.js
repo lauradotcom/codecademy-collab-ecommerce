@@ -1,15 +1,9 @@
-import React, { useState } from "react";
-import Header from "./Header";
-
-import "../../styles/global.css";
-
-const cartOverlay = {
-  position: "fixed",
-  top: "100px",
-  width: "100vw",
-  height: "90vh",
-  backgroundColor: "black",
-};
+import React, { useState } from 'react';
+//
+import Header from './Header';
+import CartDrawer from './CartDrawer';
+//
+import '../../styles/global.css';
 
 const Layout = ({ children }) => {
   // Local state to handle showing cart modal/overlay
@@ -23,7 +17,7 @@ const Layout = ({ children }) => {
     <>
       <Header toggleCart={toggleCart} />
       {/* REPLACE with Cart component */}
-      {showCart && <div style={cartOverlay}></div>}
+      {showCart && <CartDrawer closeCart={toggleCart} />}
       {children}
     </>
   );
