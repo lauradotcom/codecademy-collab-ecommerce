@@ -33,7 +33,7 @@ const CartActions = ({ product }) => {
         <button
           className={quantityButton}
           onClick={() => setQuantity(quantity + 1)}
-          disabled={quantity <= 30}
+          disabled={quantity >= 30}
         >
           +
         </button>
