@@ -26,7 +26,7 @@ const Header = ({ toggleCart }) => {
         <li>
           {/* REPLACE with CartButton component */}
           <button onClick={toggleCart}>
-            <FaShoppingCart /> {cart.totalCount}
+            <FaShoppingCart /> {cart.totalQuantity}
           </button>
         </li>
         {listItems.map((item) => (
