@@ -8,10 +8,8 @@ const ProductDetails = ({ product }) => {
   return (
     <div className={root}>
       <h2>{product.name}</h2>
-      <h2>${product.price}.00</h2>
-      <p>
-        {product.description}
-      </p>
+      <h2>${product.price.toFixed(2)}</h2>
+      <p>{product.description}</p>
     </div>
   );
 };
