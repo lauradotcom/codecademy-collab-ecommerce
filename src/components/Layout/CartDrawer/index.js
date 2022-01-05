@@ -8,13 +8,14 @@ import * as styles from "./index.module.css";
 const CartDrawer = ({ closeCart }) => {
   const dispatch = useDispatch();
   const cart = useSelector(cartSelector);
+  const { items, totalQuantity, totalPrice } = cart;
 
   const orderSummaryDetails = [
-    ["# of Items:", cart.totalCount],
-    ["Subtotal", cart.totalAmount],
+    ["# of Items:", totalQuantity],
+    ["Subtotal", totalPrice],
     ["Shipping:", "FREE!"],
     ["Estimated Tax:", "Calculated at Checkout"],
-    ["Total:", cart.totalAmount],
+    ["Total:", totalPrice],
   ];
 
   const updateItemQuantity = (item, add, clear) => {
@@ -47,9 +48,9 @@ const CartDrawer = ({ closeCart }) => {
           </button>
         </div>
         <hr />
-        {cart.totalQuantity > 0 && (
+        {totalQuantity > 0 && (
           <>
-            {cart.items.map((product) => (
+            {items.map((product) => (
               <div key={product.id} className={styles.productSection}>
                 <img src={product.images[0]} className={styles.productImage} />
                 <div className={styles.productDescription}>
@@ -96,7 +97,7 @@ const CartDrawer = ({ closeCart }) => {
                   className={styles.btn}
                   onClick={() =>
                     alert(
-                      `Purchasing ${cart.totalCount} items for $${cart.totalAmount}`
+                      `Purchasing ${totalQuantity} items for $${totalPrice}`
                     )
                   }
                 >
@@ -106,15 +107,15 @@ const CartDrawer = ({ closeCart }) => {
             </div>
           </>
         )}
-        {cart.totalQuantity === 0 ? (
+        {totalQuantity === 0 ? (
           <>
             <div>Your cart is currently empty</div>
             <button onClick={closeCart}>Continue shopping</button>
           </>
         ) : (
           <>
-            <div>Total Amount: {cart.totalAmount}</div>
-            <div>Total Count: {cart.totalCount}</div>
+            <div>Total Price: {totalPrice}</div>
+            <div>Total Quantity: {totalQuantity}</div>
           </>
         )}
       </div>
