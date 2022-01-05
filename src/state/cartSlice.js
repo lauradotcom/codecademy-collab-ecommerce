@@ -12,10 +12,13 @@ export const cartSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       const item = action.payload;
+      if (item.quantity <= 0) {
+        return;
+      }
       const updatedTotalPrice = state.totalPrice + item.price * item.quantity;
       const updatedTotalQuantity = state.totalQuantity + item.quantity;
       const existingCartItemIndex = state.items.findIndex(
-        (item) => item.id === item.id
+        (existingItem) => existingItem.id === item.id
       );
       const existingCartItem = state.items[existingCartItemIndex];
       let updatedItems;
@@ -40,7 +43,7 @@ export const cartSlice = createSlice({
       const updatedTotalPrice = state.totalPrice - item.price * item.quantity;
       const updatedTotalQuantity = state.totalQuantity - item.quantity;
       const existingCartItemIndex = state.items.findIndex(
-        (item) => item.id === item.id
+        (existingItem) => existingItem.id === item.id
       );
       const existingCartItem = state.items[existingCartItemIndex];
       let updatedItems;
