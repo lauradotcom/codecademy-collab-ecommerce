@@ -12,6 +12,7 @@ import * as styles from "./index.module.css";
 
 const CartDrawer = ({ closeCart }) => {
   const cart = useSelector(cartSelector);
+  const { items, totalQuantity, totalPrice } = cart;
 
   return (
     <div className={styles.root}>
