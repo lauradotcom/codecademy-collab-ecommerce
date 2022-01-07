@@ -1,14 +1,16 @@
 import React from "react";
 //
+import { formatPrice } from "../../../../lib/helpers";
+//
 import * as styles from "./OrderSummary.module.css";
 
 const OrderSummary = ({ cart }) => {
   const orderSummaryDetails = [
-    ["# of Items:", cart.totalCount],
-    ["Subtotal", cart.totalAmount],
+    ["# of Items:", cart.totalQuantity],
+    ["Subtotal", formatPrice(cart.totalPrice)],
     ["Shipping:", "FREE!"],
     ["Estimated Tax:", "Calculated at Checkout"],
-    ["Total:", cart.totalAmount],
+    ["Total:", formatPrice(cart.totalPrice)],
   ];
 
   return (
@@ -29,7 +31,7 @@ const OrderSummary = ({ cart }) => {
           className={styles.btn}
           onClick={() =>
             alert(
-              `Purchasing ${cart.totalCount} items for $${cart.totalAmount}`
+              `Purchasing ${cart.totalQuantity} items for $${cart.totalPrice}`
             )
           }
         >
