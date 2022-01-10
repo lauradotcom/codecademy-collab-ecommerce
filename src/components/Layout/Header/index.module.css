@@ -6,7 +6,7 @@
   box-sizing: border-box;
   background-color: #F6F6FF;
   top: 0px;
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
 }
