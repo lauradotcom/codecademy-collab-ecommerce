@@ -6,6 +6,7 @@ import CartDrawer from './CartDrawer';
 import '../../styles/global.css';
 import '@fontsource/varela';
 import '@fontsource/noto-sans';
+import '@fontsource/permanent-marker';
 
 const Layout = ({ children }) => {
   // Local state to handle showing cart modal/overlay
