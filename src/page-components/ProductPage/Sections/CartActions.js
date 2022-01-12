@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import Button from "../../../components/Buttons/MainButton";
 import { addItem } from "../../../state/cartSlice";
 // styles
-import { root, quantityButton, quantityText } from "./CartActions.module.css";
+import { root, quantityButton, quantityText, additionalInfo } from "./CartActions.module.css";
 
 const CartActions = ({ product }) => {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ const CartActions = ({ product }) => {
         onClick={addItemToCart}
         buttonText="Add to cart"
       />
-      <div>
+      <div className={additionalInfo} >
         <span>Free shipping on orders over $50*</span>
         <br />
         <span>Return policy</span>
