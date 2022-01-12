@@ -33,14 +33,18 @@
   margin-left: auto;
   margin-right: 10px;
 }
+
 /* product */
 .product-section {
   display: flex;
   margin: 10px;
 }
 .product-image {
-  width: 100px;
+  width: 130px;
+  height: 100px;
+  margin-right: 10px;
 }
+
 /* product description */
 .product-description {
   margin: 0 0 5px 5px;
@@ -52,8 +56,16 @@
   margin: 5px;
 }
 .quantity-button {
+  margin: 5px;
+  height: 30px;
+  width: 30px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  border: none;
 }
-.quantity-button:hover {
+.quantity-button:active {
+  background-color: #6767ab;
+  color: #f6f6ff;
   cursor: pointer;
 }
 .remove-button {
@@ -62,6 +74,7 @@
 .remove-button:hover {
   cursor: pointer;
 }
+
 /* order summary */
 .order-summary {
   border: 1px dotted grey;
