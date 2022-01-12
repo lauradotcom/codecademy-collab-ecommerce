@@ -4,6 +4,11 @@ import { root } from './ProductDetails.module.css';
 
 // I add the styles here because using the external css file didn't work idk why.
 // I'm open to suggestions on how to do this better
+const productTitle = {
+  fontSize: '1.5rem',
+  fontWeight: 'bold',
+  marginTop: '7%'
+}
 const pricesContainer = {
   display: 'flex',
   justifyContent: 'space-evenly',
@@ -24,7 +29,9 @@ const ProductDetails = ({ product }) => {
 
   return (
     <div className={root}>
-      <h2>{product.name}</h2>
+      <h2 style={productTitle}>
+        {product.name}
+      </h2>
       <div style={pricesContainer}>
         <h2 style={priceStyles}>
           ${(product.price * product.discount).toFixed(2)}

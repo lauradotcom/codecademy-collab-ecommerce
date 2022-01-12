@@ -1,7 +1,7 @@
 .main {
   width: 110px;
   height: 40px;
-  margin: 1.25rem;
+  margin: 2.25rem;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -16,6 +16,6 @@
   border: 2px solid #6767ab;
   background-color: #f6f6ff;
   color: #6767ab;
-  transition: all 0.1s ease-in-out;
+  transition: all 100ms ease-in-out;
   cursor: pointer;
 }
