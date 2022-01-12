@@ -10,11 +10,11 @@ const ProductDetails = ({ product }) => {
       <h2 className={styles.productTitle}>
         {product.name}
       </h2>
-      <div style={styles.pricesContainer}>
-        <h2 style={styles.price}>
+      <div className={styles.pricesContainer}>
+        <h2 className={styles.price}>
           ${(product.price * product.discount).toFixed(2)}
         </h2>
-        <h2 style={styles.discountPrice}>
+        <h2 className={styles.discountPrice}>
           ${product.price.toFixed(2)}
         </h2>
       </div>
