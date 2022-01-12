@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { root } from './ProductDetails.module.css';
 
-// I add the styles here because using the external css file didn't work
+// I add the styles here because using the external css file didn't work idk why.
 // I'm open to suggestions on how to do this better
 const pricesContainer = {
   display: 'flex',

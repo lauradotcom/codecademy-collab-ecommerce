@@ -1,8 +1,11 @@
 .main {
-  width: auto;
+  width: 110px;
   height: 2rem;
   margin: 1.25rem;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #f6f6ff;
   background-color: #6767ab;
   font-weight: 600;
