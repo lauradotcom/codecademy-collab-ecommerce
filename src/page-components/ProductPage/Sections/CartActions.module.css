@@ -7,9 +7,20 @@
 }
 
 .quantity-text {
-  margin: 5px;
+  margin: 10px;
+  font-size: 1.4rem;
+  user-select: none;
 }
 
 .quantity-button {
   margin: 5px;
+  height: 30px;
+  width: 30px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  border: none;
+}
+.quantity-button:active {
+  background-color: #6767ab;
+  color: #f6f6ff;
 }
