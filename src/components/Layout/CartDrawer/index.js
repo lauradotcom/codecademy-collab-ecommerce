@@ -60,7 +60,7 @@ const CartDrawer = ({ closeCart }) => {
                     <button
                       className={styles.quantityButton}
                       onClick={() => updateItemQuantity(product, false)}
-                      className={style.quantityButton}
+                      className={styles.quantityButton}
                     >
                       -
                     </button>
