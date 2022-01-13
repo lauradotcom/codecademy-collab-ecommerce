@@ -2,7 +2,7 @@ import React from "react";
 //
 import * as styles from "./CartHeader.module.css";
 
-const CartDrawer = ({ closeCart }) => {
+const CartHeader = ({ closeCart }) => {
   return (
     <div className={styles.cartHeader}>
       <span>Shopping Cart</span>
@@ -13,4 +13,4 @@ const CartDrawer = ({ closeCart }) => {
   );
 };
 
-export default CartDrawer;
+export default CartHeader;
