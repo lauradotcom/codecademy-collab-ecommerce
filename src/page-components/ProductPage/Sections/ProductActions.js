@@ -4,9 +4,13 @@ import { useDispatch } from "react-redux";
 import Button from "../../../components/Buttons/MainButton";
 import { addItem } from "../../../state/cartSlice";
 // styles
-import { root, quantityButton, quantityText } from "./CartActions.module.css";
+import {
+  root,
+  quantityButton,
+  quantityText,
+} from "./ProductActions.module.css";
 
-const CartActions = ({ product }) => {
+const ProductActions = ({ product }) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = React.useState(1);
 
@@ -38,10 +42,7 @@ const CartActions = ({ product }) => {
           +
         </button>
       </div>
-      <Button
-        onClick={addItemToCart}
-        buttonText="Add to cart"
-      />
+      <Button onClick={addItemToCart} buttonText="Add to cart" />
       <div>
         <span>Free shipping on orders over $50*</span>
         <br />
@@ -51,4 +52,4 @@ const CartActions = ({ product }) => {
   );
 };
 
-export default CartActions;
+export default ProductActions;
