@@ -17,7 +17,6 @@ const ProductPage = () => {
       <title>Product Page</title>
       <main className={main}>
         <ProductImage image={product.images[0]} />
-        <div className={splitLine} /> 
         <div className={rightColumn}>
           <ProductDetails product={product} />
           <CartActions product={product} />

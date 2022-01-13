@@ -4,17 +4,6 @@
   grid-gap: 1rem;
 }
 
-/*
-.split-line {
-  width: 1.5px;
-  height: 90%;
-  margin: 0 auto;
-  align-self: center;
-  background-color: #c4c2c2;
-  border-radius: 2px;
-}
-*/
-
 .right-column {
   text-align: center;
   display: flex;
