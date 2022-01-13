@@ -15,6 +15,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/noto-sans": "^4.5.1",
+    "@fontsource/permanent-marker": "^4.5.0",
+    "@fontsource/varela": "^4.5.0",
     "@reduxjs/toolkit": "^1.7.1",
     "gatsby": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",

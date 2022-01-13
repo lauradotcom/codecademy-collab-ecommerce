@@ -9,7 +9,8 @@ export const products = [
     description:
       "Product 1's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
     images: [image1, image2, image3],
-    price: 1,
+    price: 59.90,
+    discount: 0.5
   },
   {
     id: "p2",
@@ -17,7 +18,8 @@ export const products = [
     description:
       "Product 2's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
     images: [image2, image3, image1],
-    price: 2,
+    price: 59,
+    discount: 0
   },
   {
     id: "p3",
@@ -25,6 +27,7 @@ export const products = [
     description:
       "Product 3's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
     images: [image3, image1, image2],
-    price: 3,
+    price: 92,
+    discount: 0
   },
 ];
