@@ -1,10 +1,9 @@
-import * as React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import * as styles from './ProductDetails.module.css';
-
+import * as React from "react";
+// import { StaticImage } from "gatsby-plugin-image";
+import { formatPrice } from "../../../lib/helpers";
+import { root } from "./ProductDetails.module.css";
 
 const ProductDetails = ({ product }) => {
-
   return (
     <div className={styles.root}>
       <h2 className={styles.productTitle}>

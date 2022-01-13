@@ -1,0 +1,29 @@
+/* product */
+.product-section {
+  display: flex;
+  margin: 10px;
+}
+.product-image {
+  width: 100px;
+}
+/* product details */
+.product-details {
+  margin: 0 0 5px 5px;
+}
+.product-details .actions {
+  margin-bottom: 5px;
+}
+.quantity-text {
+  margin: 5px;
+}
+.quantity-button {
+}
+.quantity-button:hover {
+  cursor: pointer;
+}
+.remove-button {
+  text-decoration: underline;
+}
+.remove-button:hover {
+  cursor: pointer;
+}

@@ -1,10 +1,16 @@
 .main {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 100px 25px; */
+}
+
+.section {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
 }
 
-.right-column {
+.details-actions {
   text-align: center;
   display: flex;
   flex-direction: column;
