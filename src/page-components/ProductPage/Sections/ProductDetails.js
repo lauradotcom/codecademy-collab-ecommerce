@@ -14,7 +14,7 @@ const ProductDetails = ({ product }) => {
             : formatPrice(product.price)}
         </h2>
         {product.discount > 0 && (
-          <h2 className={styles.discountPrice}>${product.price.toFixed(2)}</h2>
+          <h2 className={styles.discountPrice}>{formatPrice(product.price)}</h2>
         )}
       </div>
       <p>{product.description}</p>
