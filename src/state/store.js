@@ -17,7 +17,8 @@ const localStorageMiddleware = ({ getState }) => {
 };
 
 const reHydrateStore = () => {
-  if (localStorage.getItem("cart") !== null) {
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  if (cart !== null || cart.items.length > 0) {
     const cart = JSON.parse(localStorage.getItem("cart"));
     const newCart = cart.map((item) => {
       let index = products.findIndex((element) => element.id === item.id);
