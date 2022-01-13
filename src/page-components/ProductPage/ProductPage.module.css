@@ -14,5 +14,6 @@
 @media (min-width: 1024px) {
   .main {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
