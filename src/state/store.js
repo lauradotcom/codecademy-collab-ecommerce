@@ -7,20 +7,21 @@ import { products } from "../data/products";
 const localStorageMiddleware = ({ getState }) => {
   return (next) => (action) => {
     const result = next(action);
-    const cart = getState().cart.items.map((item) => ({
+    const cartItems = getState().cart.items.map((item) => ({
       id: item.id,
       quantity: item.quantity,
     }));
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
     return result;
   };
 };
 
 const reHydrateStore = () => {
-  const cart = JSON.parse(localStorage.getItem("cart"));
-  if (cart !== null || cart.items.length > 0) {
-    const cart = JSON.parse(localStorage.getItem("cart"));
-    const newCart = cart.map((item) => {
+  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  console.log(cartItems);
+  if (cartItems !== null && cartItems.length > 0) {
+    console.log(cartItems.length);
+    const newCartItems = cartItems.map((item) => {
       let index = products.findIndex((element) => element.id === item.id);
       return {
         id: item.id,
@@ -34,18 +35,18 @@ const reHydrateStore = () => {
     });
     let totalPrice = 0;
     let totalQuantity = 0;
-    newCart.forEach((item) => {
+    newCartItems.forEach((item) => {
       totalPrice += item.price * (1 - item.discount) * item.quantity;
       totalQuantity += item.quantity;
     });
     console.log({
-      items: newCart,
+      items: newCartItems,
       totalPrice,
       totalQuantity,
     });
     return {
       cart: {
-        items: newCart,
+        items: newCartItems,
         totalPrice: totalPrice,
         totalQuantity: totalQuantity,
       },
