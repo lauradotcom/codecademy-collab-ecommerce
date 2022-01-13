@@ -1,7 +1,7 @@
 import * as React from "react";
 // import { StaticImage } from "gatsby-plugin-image";
 import { formatPrice } from "../../../lib/helpers";
-import { root } from "./ProductDetails.module.css";
+import * as styles from "./ProductDetails.module.css";
 
 const ProductDetails = ({ product }) => {
   return (
