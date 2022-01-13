@@ -15,7 +15,7 @@ export const cartSlice = createSlice({
       if (item.quantity <= 0) {
         return;
       }
-      const updatedTotalPrice = state.totalPrice + item.price * item.quantity;
+      const updatedTotalPrice = state.totalPrice + (item.price * (1 - item.discount)) * item.quantity;
       const updatedTotalQuantity = state.totalQuantity + item.quantity;
       const existingCartItemIndex = state.items.findIndex(
         (existingItem) => existingItem.id === item.id
@@ -40,7 +40,8 @@ export const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       const item = action.payload;
-      const updatedTotalPrice = state.totalPrice - item.price * item.quantity;
+      const updatedTotalPrice =
+        state.totalPrice - (item.price * (1 - item.discount)) * item.quantity;
       const updatedTotalQuantity = state.totalQuantity - item.quantity;
       const existingCartItemIndex = state.items.findIndex(
         (existingItem) => existingItem.id === item.id

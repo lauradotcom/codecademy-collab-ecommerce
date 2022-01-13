@@ -1,18 +1,55 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./cartSlice";
 
+import { products } from "../data/products";
+
 //MIDDLEWARE
 const localStorageMiddleware = ({ getState }) => {
-  return next => action => {
+  return (next) => (action) => {
     const result = next(action);
-    localStorage.setItem('cart', JSON.stringify(getState()));
+    const cart = getState().cart.items.map((item) => ({
+      id: item.id,
+      quantity: item.quantity,
+    }));
+    localStorage.setItem("cart", JSON.stringify(cart));
     return result;
   };
 };
 
 const reHydrateStore = () => {
-  if (localStorage.getItem('cart') !== null) {
-    return JSON.parse(localStorage.getItem('cart')); // re-hydrate the store
+  const cart = JSON.parse(localStorage.getItem("cart"));
+  if (cart !== null || cart.items.length > 0) {
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    const newCart = cart.map((item) => {
+      let index = products.findIndex((element) => element.id === item.id);
+      return {
+        id: item.id,
+        name: products[index].name,
+        description: products[index].description,
+        images: products[index].images,
+        price: products[index].price,
+        discount: products[index].discount,
+        quantity: item.quantity,
+      };
+    });
+    let totalPrice = 0;
+    let totalQuantity = 0;
+    newCart.forEach((item) => {
+      totalPrice += item.price * (1 - item.discount) * item.quantity;
+      totalQuantity += item.quantity;
+    });
+    console.log({
+      items: newCart,
+      totalPrice,
+      totalQuantity,
+    });
+    return {
+      cart: {
+        items: newCart,
+        totalPrice: totalPrice,
+        totalQuantity: totalQuantity,
+      },
+    }; // re-hydrate the store
   }
 };
 
