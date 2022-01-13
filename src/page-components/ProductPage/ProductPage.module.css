@@ -1,9 +1,9 @@
 .main {
   display: grid;
-  grid-template-columns: 1fr .1fr 1fr;
-  margin: 100px 25px;
+  grid-template-columns: 1fr;
 }
 
+/*
 .split-line {
   width: 1.5px;
   height: 90%;
@@ -12,6 +12,7 @@
   background-color: #c4c2c2;
   border-radius: 2px;
 }
+*/
 
 .right-column {
   text-align: center;
@@ -20,8 +21,8 @@
   align-items: center;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 1024px) {
   .main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
