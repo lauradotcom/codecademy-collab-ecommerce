@@ -1,0 +1,41 @@
+[
+  {
+    "id": "p1",
+    "productId": "p1",
+    "name": "Product 1 Name",
+    "description": "Product 1's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product1-1.png",
+      "../images/product1-2.png",
+      "../images/product1-3.png"
+    ],
+    "price": 59.9,
+    "discount": 0.5
+  },
+  {
+    "id": "p2",
+    "productId": "p2",
+    "name": "Product 2 Name",
+    "description": "Product 2's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product1-2.png",
+      "../images/product1-3.png",
+      "../images/product1-1.png"
+    ],
+    "price": 59,
+    "discount": 0
+  },
+  {
+    "id": "p3",
+    "productId": "p3",
+    "name": "Product 3 Name",
+    "description": "Product 3's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product1-3.png",
+      "../images/product1-1.png",
+      "../images/product1-2.png"
+    ],
+    "price": 92,
+    "discount": 0
+  }
+]
