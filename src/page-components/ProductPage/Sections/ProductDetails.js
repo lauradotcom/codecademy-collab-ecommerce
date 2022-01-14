@@ -1,5 +1,4 @@
 import * as React from "react";
-// import { StaticImage } from "gatsby-plugin-image";
 import { formatPrice } from "../../../lib/helpers";
 import * as styles from "./ProductDetails.module.css";
 
