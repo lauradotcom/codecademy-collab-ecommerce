@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as styles from "./ProductDetails.module.css";
 import ProductPrice from "./ProductPrice";
-j
+
 const ProductDetails = ({ product }) => {
   return (
     <div className={styles.root}>
