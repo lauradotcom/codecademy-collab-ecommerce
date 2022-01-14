@@ -32,7 +32,7 @@ export const query = graphql`
       productId
       images {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, placeholder: TRACED_SVG)
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
       }
     }
