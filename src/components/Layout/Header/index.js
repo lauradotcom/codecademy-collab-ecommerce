@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 //
 import HamburgerMenu from './Sections/HamburgerMenu';
+import MenuModal from './Sections/MenuModal';
 import CartButton from './Sections/CartButton';
 //
 import * as styles from './index.module.css';
