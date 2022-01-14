@@ -10,21 +10,24 @@ import * as styles from "./ProductPage.module.css";
 const ProductPage = ({ products }) => {
   return (
     <>
-      <title>Product Page</title>
-      <main className={styles.main}>
-        {products.map((product) => (
-          <section key={product.id} className={styles.section}>
-            <Link to={`/products/${product.productId}`}>
-              <ProductImage image={product.images[0]} alt={product.name} />
-            </Link>
-            <div className={styles.detailsActions}>
+      <title>Products Page</title>
+      <main>
+        <h1>Products Page</h1>
+        <section className={styles.main}>
+          {products.map((product) => (
+            <section key={product.id} className={styles.section}>
               <Link to={`/products/${product.productId}`}>
-                <h3>{product.name}</h3>
+                <ProductImage image={product.images[0]} alt={product.name} />
               </Link>
-              <ProductPrice product={product} />
-            </div>
-          </section>
-        ))}
+              <div className={styles.detailsActions}>
+                <Link to={`/products/${product.productId}`}>
+                  <h2>{product.name}</h2>
+                </Link>
+                <ProductPrice product={product} />
+              </div>
+            </section>
+          ))}
+        </section>
       </main>
     </>
   );
