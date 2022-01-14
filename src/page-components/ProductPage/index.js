@@ -7,18 +7,14 @@ import ProductActions from "./Sections/ProductActions";
 // styles
 import { main, section, detailsActions } from "./ProductPage.module.css";
 
-// pull dummy item from data file
-import { products } from "../../data/products";
-
-const ProductPage = () => {
-  // const product = products[0];
+const ProductPage = ({ products }) => {
   return (
     <>
       <title>Product Page</title>
       <main className={main}>
         {products.map((product) => (
           <section key={product.id} className={section}>
-            <ProductImage image={product.images[0]} />
+            <ProductImage image={product.images[0]} alt={product.name} />
             <div className={detailsActions}>
               <ProductDetails product={product} />
               <ProductActions product={product} />
