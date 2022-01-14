@@ -1,9 +1,9 @@
 import React from "react";
-import { useSelector } from 'react-redux';
-import { cartSelector } from '../../../../state/cartSlice';
+import { useSelector } from "react-redux";
+import { cartSelector } from "../../../../state/cartSlice";
 //
-import { FaShoppingBag } from 'react-icons/fa';
-
+import { FaShoppingBag } from "react-icons/fa";
+import CartQuantity from "./CartQuantity";
 import * as styles from "./CartButton.module.css";
 
 const CartButton = ({ toggleCart }) => {
@@ -12,7 +12,7 @@ const CartButton = ({ toggleCart }) => {
 
   return (
     <div>
-    <FaShoppingBag className={styles.menuIcon} onClick={toggleCart} /> {cart.totalQuantity}
+    <FaShoppingBag className={styles.menuIcon} onClick={toggleCart} /> <CartQuantity />
     </div>
   );
 };
