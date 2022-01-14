@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 
 import * as styles from "./HamburgerMenu.module.css";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ open, setOpen }) => {
 
   const listItems = [
     { link: '/product', name: 'Product' },
@@ -13,7 +13,7 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <FaBars />
+      <FaBars open={open} onClick={() => setOpen(!open)} />
       <ul className={styles.headerMenu}>
     {listItems.map((item) => (
         <li>
