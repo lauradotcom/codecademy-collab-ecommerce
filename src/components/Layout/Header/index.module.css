@@ -53,3 +53,9 @@
     font-size: 22px;
   }
 }
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 2rem;
+  }
+}
