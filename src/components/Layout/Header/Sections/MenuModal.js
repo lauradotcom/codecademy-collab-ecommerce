@@ -11,13 +11,17 @@ const MenuModal = () => {
   ];
 
   return (
-    <ul className={styles.headerMenu}>
-    {listItems.map((item) => (
-        <li>
-        <Link to={item.link}>{item.name}</Link>
-        </li>
-    ))}
-      </ul>
+    <div className={styles.root}>
+      <nav className={styles.root}>
+        <ul className={styles.headerMenu}>
+        {listItems.map((item) => (
+            <li>
+            <Link to={item.link}>{item.name}</Link>
+            </li>
+        ))}
+        </ul>
+      </nav>
+    </div>
   )
 }
 

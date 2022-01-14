@@ -14,6 +14,7 @@ const Header = ({ toggleCart }) => {
   return (
     <header className={styles.header}>
       <HamburgerMenu open={open} setOpen={setOpen} />
+      <MenuModal />
       <Link to='/' className={styles.homeLink}>
         <p>EcommStore</p>
       </Link>
