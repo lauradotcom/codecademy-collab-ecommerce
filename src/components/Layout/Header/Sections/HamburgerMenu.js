@@ -1,13 +1,19 @@
 import React from "react";
-import { FaBars } from "react-icons/fa";
 
 import * as styles from "./HamburgerMenu.module.css";
 
-const HamburgerMenu = ({ toggleMenu }) => {
+const HamburgerMenu = ({ showMenu, toggleMenu }) => {
 
   return (
     <div className={styles.root} role="button">
-      <FaBars className={styles.menuIcon} onClick={toggleMenu}/>
+      <div
+        className={showMenu && `${styles.active}`}
+        onClick={toggleMenu}
+      >
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+      </div>
     </div>
   );
 };

@@ -2,12 +2,27 @@
   cursor: pointer;
 }
 
-.menu-icon {
-  font-size: 1.5rem;
+.bar {
+  display: block;
+  width: 1.625rem;
+  height: 0.25rem;
+  margin: 5px auto;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #141421;
 }
 
-@media screen and (min-width: 1024px) {
-  .menu-icon {
-    font-size: 1.75rem;
-  }
+.active .bar:nth-child(1) {
+  -webkit-transform: translateY(.625rem) rotate(45deg) scale(1.25);
+  transform: translateY(.625rem) rotate(45deg) scale(1.25);
+}
+
+.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-0.5rem) rotate(-45deg) scale(1.25);
+  transform: translateY(-0.5rem) rotate(-45deg) scale(1.25);
 }
