@@ -1,0 +1,65 @@
+[
+  {
+    "id": "p1",
+    "productId": "p1",
+    "name": "Product 1",
+    "description": "Product 1's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product1-1.jpg",
+      "../images/product1-2.jpg",
+      "../images/product1-3.jpg"
+    ],
+    "price": 79.99,
+    "discount": 0.25
+  },
+  {
+    "id": "p2",
+    "productId": "p2",
+    "name": "Product 2",
+    "description": "Product 2's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product2-1.jpg",
+      "../images/product2-2.jpg"
+    ],
+    "price": 120.99,
+    "discount": 0.15
+  },
+  {
+    "id": "p3",
+    "productId": "p3",
+    "name": "Product 3",
+    "description": "Product 3's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product3-1.jpg",
+      "../images/product3-2.jpg"
+    ],
+    "price": 89.9,
+    "discount": 0
+  },
+  {
+    "id": "p4",
+    "productId": "p4",
+    "name": "Product 4",
+    "description": "Product 4's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product4-1.jpg",
+      "../images/product4-2.jpg",
+      "../images/product4-3.jpg"
+    ],
+    "price": 69.9,
+    "discount": 0
+  },
+  {
+    "id": "p5",
+    "productId": "p5",
+    "name": "Product 5",
+    "description": "Product 5's description with lots of details wow here are all the features you need to know about and then you will buy! Buy it now!",
+    "images": [
+      "../images/product5-1.jpg",
+      "../images/product5-2.jpg",
+      "../images/product5-3.jpg"
+    ],
+    "price": 39.9,
+    "discount": 0
+  }
+]

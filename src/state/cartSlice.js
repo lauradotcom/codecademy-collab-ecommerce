@@ -18,7 +18,7 @@ export const cartSlice = createSlice({
       const updatedTotalPrice = state.totalPrice + (item.price * (1 - item.discount)) * item.quantity;
       const updatedTotalQuantity = state.totalQuantity + item.quantity;
       const existingCartItemIndex = state.items.findIndex(
-        (existingItem) => existingItem.id === item.id
+        (existingItem) => existingItem.productId === item.productId
       );
       const existingCartItem = state.items[existingCartItemIndex];
       let updatedItems;
@@ -44,7 +44,7 @@ export const cartSlice = createSlice({
         state.totalPrice - (item.price * (1 - item.discount)) * item.quantity;
       const updatedTotalQuantity = state.totalQuantity - item.quantity;
       const existingCartItemIndex = state.items.findIndex(
-        (existingItem) => existingItem.id === item.id
+        (existingItem) => existingItem.productId === item.productId
       );
       const existingCartItem = state.items[existingCartItemIndex];
       let updatedItems;
