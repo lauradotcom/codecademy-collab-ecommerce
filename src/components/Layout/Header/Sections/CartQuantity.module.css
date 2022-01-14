@@ -1,0 +1,18 @@
+.root {
+  font-size: 9px;
+}
+
+.quantity-container {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  background-color: #A6A6B9;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.quantity-count {
+  display: inline-block;
+  line-height: 1.5rem;
+  vertical-align: middle;
+}

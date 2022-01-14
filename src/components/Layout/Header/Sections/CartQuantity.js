@@ -10,9 +10,9 @@ const CartQuantity = () => {
   const cart = useSelector(cartSelector);
 
   return (
-    <>
-    {cart.totalQuantity}
-    </>
+    <div className={styles.quantityContainer}>
+      <span className={styles.quantityCount}>{cart.totalQuantity}</span>
+    </div>
   );
 };
 
