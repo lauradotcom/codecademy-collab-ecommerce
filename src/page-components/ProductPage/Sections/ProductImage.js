@@ -1,18 +1,10 @@
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as React from 'react';
-// import { StaticImage } from 'gatsby-plugin-image';
 import { root } from './ProductImage.module.css';
 
-const ProductImage = ({ image }) => {
+const ProductImage = ({ image, alt }) => {
   return (
-    <img
-      className={root}
-      src={image}
-      alt='productImg'
-      // placeholder='blurred'
-      // layout='fixed'
-      // width={200}
-      // height={200}
-    />
+    <GatsbyImage className={root} image={getImage(image)} alt={alt} />
   );
 };
 
