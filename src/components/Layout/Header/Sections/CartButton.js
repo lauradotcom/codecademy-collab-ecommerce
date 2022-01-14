@@ -11,7 +11,7 @@ const CartButton = ({ toggleCart }) => {
   const cart = useSelector(cartSelector);
 
   return (
-    <div>
+    <div className={styles.cartButtonContainer}>
       <FaShoppingBag className={styles.menuIcon} onClick={toggleCart} /> 
       <CartQuantity />
     </div>
