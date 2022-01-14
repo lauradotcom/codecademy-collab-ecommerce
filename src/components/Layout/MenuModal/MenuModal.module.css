@@ -1,5 +1,7 @@
 .root {
+  position: fixed;
   height: 100vh;
   width: 100vw;
   background-color: #F6F6FF;
+  z-index: 2;
 }
