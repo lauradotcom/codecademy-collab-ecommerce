@@ -1,0 +1,28 @@
+.root {
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 1.625rem;
+  height: 0.25rem;
+  margin: 4px auto;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #141421;
+}
+
+.active .bar:nth-child(1) {
+  -webkit-transform: translateY(.5rem) rotate(45deg) scale(1.25);
+  transform: translateY(.5rem) rotate(45deg) scale(1.25);
+}
+
+.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-0.5rem) rotate(-45deg) scale(1.25);
+  transform: translateY(-0.5rem) rotate(-45deg) scale(1.25);
+}

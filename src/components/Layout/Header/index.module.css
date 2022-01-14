@@ -9,6 +9,7 @@
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .home-link {
@@ -16,6 +17,10 @@
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5rem;
   color: #141421;
+}
+
+.menu-icon {
+  font-size: 1.25rem;
 }
 
 .header-menu {
@@ -46,5 +51,11 @@
   .header-menu li a {
     padding: 15px 15px;
     font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 2rem;
   }
 }
