@@ -1,17 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 //
-import { useSelector } from 'react-redux';
-import { cartSelector } from '../../../state/cartSlice';
-//
-import { FaShoppingCart } from 'react-icons/fa';
 import CartButton from './Sections/CartButton';
 //
 import * as styles from './index.module.css';
 
 const Header = ({ toggleCart }) => {
-  // useSelector accesses Redux state by passing in the cartSelector
-  const cart = useSelector(cartSelector);
 
   const listItems = [
     { link: '/product', name: 'Product' },
