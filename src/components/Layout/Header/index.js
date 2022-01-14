@@ -12,7 +12,7 @@ const Header = ({ toggleCart }) => {
 
   return (
     <header className={styles.header}>
-      <HamburgerMenu />
+      <HamburgerMenu open={open} setOpen={setOpen} />
       <Link to='/' className={styles.homeLink}>
         <p>EcommStore</p>
       </Link>
