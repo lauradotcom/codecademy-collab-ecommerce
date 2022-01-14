@@ -5,9 +5,32 @@ import { addItem, removeItem } from "../../../../state/cartSlice";
 import { formatPrice } from "../../../../lib/helpers";
 //
 import * as styles from "./CartProducts.module.css";
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+const query = graphql`
+  {
+    allProductsJson {
+      nodes {
+        description
+        discount
+        id
+        images {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+          }
+        }
+        name
+        price
+        productId
+      }
+    }
+  }
+`;
 
 const CartProducts = ({ products }) => {
   const dispatch = useDispatch();
+  const allProducts = useStaticQuery(query).allProductsJson.nodes;
 
   const updateItemQuantity = (item, add, clear) => {
     if (add) {
@@ -29,40 +52,49 @@ const CartProducts = ({ products }) => {
     }
   };
 
-  return products.map((product) => (
-    <div key={product.id} className={styles.productSection}>
-      <img
-        src={product.images[0]}
-        className={styles.productImage}
-        alt="product"
-      />
-      <div className={styles.productDetails}>
-        <div>{product.name}</div>
-        <div>{product.discount ? formatPrice(product.price * product.discount) : formatPrice(product.price)}</div>
-        <div className={styles.actions}>
-          <button
-            className={styles.quantityButton}
-            onClick={() => updateItemQuantity(product, false)}
+  return products.map((product) => {
+    const index = allProducts.findIndex(
+      (existingItem) => existingItem.productId === product.productId
+    );
+    return (
+      <div key={product.id} className={styles.productSection}>
+        <GatsbyImage
+          className={styles.productImage}
+          image={getImage(allProducts[index].images[0])}
+          alt={product.name}
+        />
+        <div className={styles.productDetails}>
+          <div>{product.name}</div>
+          <div>
+            {product.discount
+              ? formatPrice(product.price * product.discount)
+              : formatPrice(product.price)}
+          </div>
+          <div className={styles.actions}>
+            <button
+              className={styles.quantityButton}
+              onClick={() => updateItemQuantity(product, false)}
+            >
+              -
+            </button>
+            <span className={styles.quantityText}>{product.quantity}</span>
+            <button
+              className={styles.quantityButton}
+              onClick={() => updateItemQuantity(product, true)}
+            >
+              +
+            </button>
+          </div>
+          <a
+            className={styles.removeButton}
+            onClick={() => updateItemQuantity(product, false, true)}
           >
-            -
-          </button>
-          <span className={styles.quantityText}>{product.quantity}</span>
-          <button
-            className={styles.quantityButton}
-            onClick={() => updateItemQuantity(product, true)}
-          >
-            +
-          </button>
+            Remove
+          </a>
         </div>
-        <a
-          className={styles.removeButton}
-          onClick={() => updateItemQuantity(product, false, true)}
-        >
-          Remove
-        </a>
       </div>
-    </div>
-  ));
+    );
+  });
 };
 
 export default CartProducts;
