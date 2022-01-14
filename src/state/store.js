@@ -18,9 +18,7 @@ const localStorageMiddleware = ({ getState }) => {
 
 const reHydrateStore = () => {
   const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-  console.log(cartItems);
   if (cartItems !== null && cartItems.length > 0) {
-    console.log(cartItems.length);
     const newCartItems = cartItems.map((item) => {
       let index = products.findIndex((element) => element.id === item.id);
       return {
@@ -38,11 +36,6 @@ const reHydrateStore = () => {
     newCartItems.forEach((item) => {
       totalPrice += item.price * (1 - item.discount) * item.quantity;
       totalQuantity += item.quantity;
-    });
-    console.log({
-      items: newCartItems,
-      totalPrice,
-      totalQuantity,
     });
     return {
       cart: {
