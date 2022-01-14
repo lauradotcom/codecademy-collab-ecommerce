@@ -8,7 +8,7 @@ const HamburgerMenu = ({ toggleMenu }) => {
 
   return (
     <>
-      <FaBars onClick={toggleMenu}/>
+      <FaBars className={styles.menuIcon} onClick={toggleMenu}/>
     </>
   );
 };

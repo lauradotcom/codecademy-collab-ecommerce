@@ -11,11 +11,11 @@ const Header = ({ toggleCart, toggleMenu }) => {
 
   return (
     <header className={styles.header}>
-      <HamburgerMenu toggleMenu={toggleMenu} />
+      <HamburgerMenu className={styles.menuIcon} toggleMenu={toggleMenu} />
       <Link to='/' className={styles.homeLink}>
         <p>EcommStore</p>
       </Link>
-      <CartButton toggleCart={toggleCart} />
+      <CartButton className={styles.menuIcon} toggleCart={toggleCart} />
     </header>
   );
 };

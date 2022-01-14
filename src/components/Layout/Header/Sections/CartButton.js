@@ -11,9 +11,9 @@ const CartButton = ({ toggleCart }) => {
   const cart = useSelector(cartSelector);
 
   return (
-    <button onClick={toggleCart}>
-    <FaShoppingBag /> {cart.totalQuantity}
-    </button>
+    <div>
+    <FaShoppingBag className={styles.menuIcon} onClick={toggleCart} /> {cart.totalQuantity}
+    </div>
   );
 };
 
