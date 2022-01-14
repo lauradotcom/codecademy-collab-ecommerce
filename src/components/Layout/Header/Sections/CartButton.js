@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from 'react-redux';
 import { cartSelector } from '../../../../state/cartSlice';
 //
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingBag } from 'react-icons/fa';
 
 import * as styles from "./CartButton.module.css";
 
@@ -12,7 +12,7 @@ const CartButton = ({ toggleCart }) => {
 
   return (
     <button onClick={toggleCart}>
-    <FaShoppingCart /> {cart.totalQuantity}
+    <FaShoppingBag /> {cart.totalQuantity}
     </button>
   );
 };
