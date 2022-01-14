@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { cartSelector } from '../../../state/cartSlice';
 //
 import { FaShoppingCart } from 'react-icons/fa';
+import CartButton from './Sections/CartButton';
 //
 import * as styles from './index.module.css';
 
@@ -24,10 +25,7 @@ const Header = ({ toggleCart }) => {
       </Link>
       <ul className={styles.headerMenu}>
         <li>
-          {/* REPLACE with CartButton component */}
-          <button onClick={toggleCart}>
-            <FaShoppingCart /> {cart.totalQuantity}
-          </button>
+          <CartButton toggleCart={toggleCart} />
         </li>
         {listItems.map((item) => (
           <li>
