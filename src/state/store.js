@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./cartSlice";
 
-import { products } from "../data/products";
+import * as products from "../data/products.json";
 
 //MIDDLEWARE
 const localStorageMiddleware = ({ getState }) => {
   return (next) => (action) => {
     const result = next(action);
     const cartItems = getState().cart.items.map((item) => ({
-      id: item.id,
+      productId: item.productId,
       quantity: item.quantity,
     }));
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -20,9 +20,10 @@ const reHydrateStore = () => {
   const cartItems = JSON.parse(localStorage.getItem("cartItems"));
   if (cartItems !== null && cartItems.length > 0) {
     const newCartItems = cartItems.map((item) => {
-      let index = products.findIndex((element) => element.id === item.id);
+      let index = products.findIndex((element) => element.productId === item.productId);
       return {
-        id: item.id,
+        productId: item.productId,
+        id: products[index].id,
         name: products[index].name,
         description: products[index].description,
         images: products[index].images,
