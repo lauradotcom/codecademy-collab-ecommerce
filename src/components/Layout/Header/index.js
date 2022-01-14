@@ -6,11 +6,11 @@ import CartButton from './Sections/CartButton';
 //
 import * as styles from './index.module.css';
 
-const Header = ({ toggleCart, toggleMenu }) => {
+const Header = ({ showMenu, toggleCart, toggleMenu }) => {
 
   return (
     <header className={styles.header}>
-      <HamburgerMenu className={styles.menuIcon} toggleMenu={toggleMenu} />
+      <HamburgerMenu className={styles.menuIcon} showMenu={showMenu} toggleMenu={toggleMenu} />
       <Link to='/' className={styles.homeLink}>
         <p>EcommStore</p>
       </Link>
