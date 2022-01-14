@@ -9,3 +9,9 @@
 .cart-button-container {
   display: flex;
 }
+
+@media screen and (min-width: 1024px) {
+  .menu-icon {
+    font-size: 1.75rem;
+  }
+}
