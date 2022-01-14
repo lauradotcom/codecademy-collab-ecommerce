@@ -17,10 +17,8 @@ const Header = ({ toggleCart }) => {
       <Link to='/' className={styles.homeLink}>
         <p>EcommStore</p>
       </Link>
+      <CartButton toggleCart={toggleCart} />
       <ul className={styles.headerMenu}>
-        <li>
-          <CartButton toggleCart={toggleCart} />
-        </li>
         {listItems.map((item) => (
           <li>
             <Link to={item.link}>{item.name}</Link>
