@@ -16,7 +16,7 @@ const MenuModal = ({ toggleMenu }) => {
         <ul>
         {listItems.map((item) => (
             <li>
-            <Link to={item.link}>{item.name}</Link>
+            <Link to={item.link} onClick={toggleMenu}>{item.name}</Link>
             </li>
         ))}
         </ul>

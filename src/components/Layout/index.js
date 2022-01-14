@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header toggleCart={toggleCart} toggleMenu={toggleMenu} />
-      {showMenu && <MenuModal closeMenu={toggleMenu} />}
+      {showMenu && <MenuModal closeMenu={toggleMenu} toggleMenu={toggleMenu}/>}
       {/* REPLACE with Cart component */}
       {showCart && <CartDrawer closeCart={toggleCart} />}
       {children}
