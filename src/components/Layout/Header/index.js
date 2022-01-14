@@ -2,19 +2,16 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 //
 import HamburgerMenu from './Sections/HamburgerMenu';
-import MenuModal from './Sections/MenuModal';
+import MenuModal from '../MenuModal/MenuModal';
 import CartButton from './Sections/CartButton';
 //
 import * as styles from './index.module.css';
 
-const Header = ({ toggleCart }) => {
-
-  const [open, setOpen] = useState(false);
+const Header = ({ toggleCart, toggleMenu }) => {
 
   return (
     <header className={styles.header}>
-      <HamburgerMenu open={open} setOpen={setOpen} />
-      <MenuModal />
+      <HamburgerMenu toggleMenu={toggleMenu} />
       <Link to='/' className={styles.homeLink}>
         <p>EcommStore</p>
       </Link>

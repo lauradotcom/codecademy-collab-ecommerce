@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 import * as styles from "./MenuModal.module.css";
 
-const MenuModal = () => {
+const MenuModal = ({ toggleMenu }) => {
 
   const listItems = [
     { link: '/product', name: 'Product' },
@@ -12,8 +12,8 @@ const MenuModal = () => {
 
   return (
     <div className={styles.root}>
-      <nav className={styles.root}>
-        <ul className={styles.headerMenu}>
+      <nav className={styles.nav}>
+        <ul>
         {listItems.map((item) => (
             <li>
             <Link to={item.link}>{item.name}</Link>

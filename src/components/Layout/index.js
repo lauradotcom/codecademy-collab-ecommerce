@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //
 import Header from './Header';
 import CartDrawer from './CartDrawer';
+import MenuModal from './MenuModal/MenuModal';
 //
 import '../../styles/global.css';
 import '@fontsource/varela';
@@ -16,9 +17,17 @@ const Layout = ({ children }) => {
     setShowCart(!showCart);
   };
 
+  // Local state to handle showing menu modal/overlay
+  const [showMenu, setShowMenu] = useState(false);
+  
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <>
-      <Header toggleCart={toggleCart} />
+      <Header toggleCart={toggleCart} toggleMenu={toggleMenu} />
+      {showMenu && <MenuModal closeMenu={toggleMenu} />}
       {/* REPLACE with Cart component */}
       {showCart && <CartDrawer closeCart={toggleCart} />}
       {children}

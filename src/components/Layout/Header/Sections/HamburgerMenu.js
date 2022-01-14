@@ -4,11 +4,11 @@ import { FaBars } from "react-icons/fa";
 
 import * as styles from "./HamburgerMenu.module.css";
 
-const HamburgerMenu = ({ open, setOpen }) => {
+const HamburgerMenu = ({ toggleMenu }) => {
 
   return (
     <>
-      <FaBars open={open} onClick={() => setOpen(!open)} />
+      <FaBars onClick={toggleMenu}/>
     </>
   );
 };
