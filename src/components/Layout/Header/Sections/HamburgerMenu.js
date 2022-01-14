@@ -7,7 +7,7 @@ const HamburgerMenu = ({ showMenu, toggleMenu }) => {
   return (
     <div className={styles.root} role="button">
       <div
-        className={showMenu && `${styles.active}`}
+        className={showMenu ? `${styles.active}` : ''}
         onClick={toggleMenu}
       >
         <span className={styles.bar}></span>
