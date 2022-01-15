@@ -5,3 +5,24 @@
   background-color: #F6F6FF;
   z-index: 2;
 }
+
+.nav {
+  padding: 25vh 25vw;
+}
+
+.nav ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+.nav ul li {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #141421;
+}
