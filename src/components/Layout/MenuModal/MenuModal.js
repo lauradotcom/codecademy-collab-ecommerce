@@ -6,8 +6,9 @@ import * as styles from "./MenuModal.module.css";
 const MenuModal = ({ toggleMenu }) => {
 
   const listItems = [
+    { link: '/', name: 'Home' },
+    { link: '/about', name: 'About'},
     { link: '/products', name: 'Products' },
-    { link: '/test', name: 'Test' },
   ];
 
   return (
