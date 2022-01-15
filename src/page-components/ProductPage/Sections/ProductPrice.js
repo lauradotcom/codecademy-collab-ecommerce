@@ -7,7 +7,7 @@ const ProductPrice = ({ product }) => {
     <div className={styles.pricesContainer}>
       <h2 className={styles.price}>
         {product.discount > 0
-          ? formatPrice(product.price * product.discount)
+          ? formatPrice(product.price * (1 - product.discount))
           : formatPrice(product.price)}
       </h2>
       {product.discount > 0 && (

@@ -67,7 +67,7 @@ const CartProducts = ({ products }) => {
           <div>{product.name}</div>
           <div>
             {product.discount
-              ? formatPrice(product.price * product.discount)
+              ? formatPrice(product.price * (1 - product.discount))
               : formatPrice(product.price)}
           </div>
           <div className={styles.actions}>
