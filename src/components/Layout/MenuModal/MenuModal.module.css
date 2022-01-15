@@ -26,3 +26,7 @@
   text-decoration: none;
   color: #141421;
 }
+
+.nav ul li a:hover {
+  color: #6767ab;
+}
