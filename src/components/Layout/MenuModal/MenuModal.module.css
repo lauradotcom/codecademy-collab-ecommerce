@@ -7,10 +7,14 @@
   opacity: 0;
 }
 
-
 .open {
   opacity: 1;
-  transition: all 0.3s ease-in 0.1s;
+  transition: all 0.2s ease-in 0.1s;
+}
+
+.closed {
+  opacity: 0;
+  transition: all 0.2s ease-out 0.1s;
 }
 
 .nav {

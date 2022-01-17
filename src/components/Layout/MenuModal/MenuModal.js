@@ -12,7 +12,7 @@ const MenuModal = ({ showMenu, toggleMenu }) => {
   ];
 
   return (
-    <div className={showMenu ? `${styles.menu} ${styles.open}` : styles.menu}>
+    <div className={showMenu ? `${styles.menu} ${styles.open}` : `${styles.menu} ${styles.closed}`}>
       <nav className={styles.nav}>
         <ul>
         {listItems.map((item) => (
