@@ -39,6 +39,7 @@
 .nav ul li a {
   text-decoration: none;
   color: #141421;
+  display: block;
 }
 
 .nav ul li a:hover {
@@ -67,20 +68,64 @@
 @media screen and (min-width: 1024px) {
   .menu {
     width: 0;
-    opacity: 1;
   }
 
   .open {
     width: 30vw;
-    transition: width 0.2s ease-in-out 0.1s;
+    transition: none;
+    animation: slide-in 0.2s;
   }
 
   .closed {
     width: 0;
-    transition: width 0.5s ease-in-out 0.1s;
+    animation: slide-out 0.2s;
   }
 
   .nav {
     padding: 10vh 0;
+  }
+
+  @keyframes slide-in {
+    0% { 
+      width: 0;
+    }
+    25% {
+      width: 7.5vw;
+    }
+    50% {
+      width: 15vw;
+    }
+    75% {
+      width: 22.5vw;
+    }
+    100% {
+      width: 30vw;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      width: 30vw;
+      z-index: 2;
+    }
+    25% {
+      width: 22.5vw;
+      z-index: 2;
+    }
+    50% {
+      width: 15vw;
+      z-index: 2;
+    }
+    75% {
+      width: 7.5vw;
+      z-index: 2;
+    }
+    90% {
+      z-index: 1;
+    }
+    100% {
+      width: 0;
+      z-index: -1;
+    }
   }
 }
