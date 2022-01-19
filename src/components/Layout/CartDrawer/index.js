@@ -21,7 +21,7 @@ const CartDrawer = ({ closeCart }) => {
         {cart.totalQuantity > 0 ? (
           <>
             <CartProducts products={cart.items} />
-            <OrderSummary cart={cart} />
+            <OrderSummary cart={cart} closeCart={closeCart} />
           </>
         ) : (
           <EmptyCartMessage closeCart={closeCart} />
