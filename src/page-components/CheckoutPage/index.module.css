@@ -1,0 +1,89 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+h3 {
+  margin: 35px;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.inline-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+}
+input {
+  height: 40px;
+  width: 88%;
+  margin: 7px 6px;
+  padding: 0;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px;
+}
+.shipping-button, .back-button {
+  width: 170px;
+  height: 55px;
+  font-size: .9rem;
+  border-radius: 5px;
+  background-color: #141421;
+  color: white;
+}
+.back-button {
+  background-color: transparent;
+  border: 1px solid #141421;
+  color: #141421;
+}
+
+.separator {
+  background-color: rgb(202, 202, 202);
+  width: 1px;
+  height: 100%;
+  border-radius: 2px;
+}
+.h-separator {
+  background-color: rgb(202, 202, 202);
+  height: 1px;
+  width: 80%;
+  border-radius: 2px;
+}
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subtotal span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.total {
+  font-size: 1.2rem;
+}
