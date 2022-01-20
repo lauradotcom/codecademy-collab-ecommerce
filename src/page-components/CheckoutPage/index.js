@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { cartSelector } from "../../state/cartSlice";
 //
 import CartProducts from "../../components/Layout/CartDrawer/Sections/CartProducts";
-import OrderSummary from "../../components/Layout/CartDrawer/Sections/OrderSummary";
 import EmptyCartMessage from "../../components/Layout/CartDrawer/Sections/EmptyCartMessage";
 //
 import * as styles from "./index.module.css";
@@ -13,7 +12,7 @@ const CheckoutPage = () => {
 
   return (
     <main className={styles.main}>
-      <section className={styles.section}>
+      <section className={styles.sectionOne}>
         <h1>Checkout</h1>
         <div className={styles.form}>
           <h3>Contact information</h3>
@@ -50,31 +49,32 @@ const CheckoutPage = () => {
         </div>
       </section>
       <div className={styles.separator}/>
-      <section className={styles.section}>
+      <section className={styles.sectionTwo}>
         {cart.totalQuantity > 0 ? (
           <>
             <CartProducts products={cart.items} />
             <div className={styles.hSeparator} />
-            <div className={styles.subtotal}>
-              <span className>
-                Subtotal: <span className={styles.price}>${cart.totalPrice.toFixed(2)}</span>
-              </span>
-              <span>
-                Shipping: <span className={styles.price}>Calculated at next step</span>
-              </span>
-              <span>
-                Estimated Tax: <span className={styles.price}>Calculated at next step</span>
-              </span>
+            <div className={styles.subtotalContainer}> {/* */}
+            
+              <div className={styles.subtotal}>
+                <span className={styles.subL}>Subtotal:</span>
+                <span className={styles.subR}>${cart.totalPrice.toFixed(2)}</span>
+              </div>
+              <div className={styles.shipping}>
+                <span className={styles.subL}>Shipping:</span>
+                <span className={styles.subR}>Calculated at next step</span>
+              </div>
+            
             </div>
           </>
         ) : (
           <EmptyCartMessage />
         )}
         <div className={styles.hSeparator}/>
-        <p>Your cart has {cart.totalQuantity} items.</p>
-        <p className={styles.total}>
-          Total: <strong>${cart.totalPrice.toFixed(2)}</strong>
-        </p>
+        <div className={styles.totalPriceContainer}>
+          <p className={styles.total}>Total:</p>
+          <p className={styles.finalPrice}>${cart.totalPrice.toFixed(2)}</p>
+        </div>
       </section>
     </main>
   );

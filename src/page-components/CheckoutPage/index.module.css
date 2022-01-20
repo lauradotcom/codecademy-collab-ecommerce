@@ -1,13 +1,15 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 0.1fr 1fr;
+  text-align: center;
 }
 
-.section {
+.section-one, .section-two {
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
 }
+
 
 h3 {
   margin: 35px;
@@ -19,7 +21,7 @@ h3 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
+  width: 90%;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -40,6 +42,9 @@ input {
   border-radius: 5px;
   border: 1px solid rgb(202, 202, 202);
 }
+input:focus {
+  outline: 1px solid #6767AB;
+}
 
 .buttons-row {
   display: flex;
@@ -53,13 +58,13 @@ input {
   height: 55px;
   font-size: .9rem;
   border-radius: 5px;
-  background-color: #141421;
+  background-color: #6767AB;
   color: white;
 }
 .back-button {
   background-color: transparent;
-  border: 1px solid #141421;
-  color: #141421;
+  border: 1px solid #6767AB;
+  color: darkslategray;
 }
 
 .separator {
@@ -71,19 +76,51 @@ input {
 .h-separator {
   background-color: rgb(202, 202, 202);
   height: 1px;
-  width: 80%;
+  width: 90%;
   border-radius: 2px;
 }
 
-.subtotal {
+.subtotal-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0;
+  margin-right: 10%;
 }
-.subtotal span {
-  font-size: 1.1rem;
-  font-weight: bold;
+.sub-l {
+  float: left;
+  color: gray;
+}
+.sub-r {
+  float: right;
+}
+
+.total-price-container {
+  margin-right: 10%;
 }
 .total {
+  float: left;
   font-size: 1.2rem;
+}
+.final-price { 
+  float: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .main {
+    grid-template-rows: 1fr 0.1fr 1fr;
+    justify-content: center;
+
+  }
+  .section-one {
+    grid-row: 3;
+  }
+  .section-two {
+    grid-row: 1;
+  }
+  .separator {
+    grid-row: 2;
+  }
 }
