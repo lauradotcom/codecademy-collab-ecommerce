@@ -108,6 +108,73 @@ input:focus {
 }
 
 
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: center;
+  user-select: none;
+  font-size: .8rem;
+}
+.breadcrumb span {
+  margin: 5px;
+  cursor: pointer;
+}
+#info:active, #shipp:active {
+  color: #6767AB;
+}
+
+.shipp-method {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
+}
+.shipp-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px 20px 20px 0;
+  border-radius: 5px;
+}
+.row-divider {
+  height: 1px;
+  width: 100%;
+  background-color:rgb(202, 202, 202);
+}
+.shipp-row .childrens {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.childrens p {
+  color: gray;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.shipp-row input {
+  height: 20px;
+  width: 10%;
+}
+.shipp-row label {
+  font-size: .9rem;
+}
+.shipp-row p {
+  font-size: .8rem;
+}
+
 @media only screen and (max-width: 800px) {
   .main {
     grid-template-rows: 1fr 0.1fr 1fr;
