@@ -73,7 +73,7 @@ const CheckoutPage = () => {
   const Shipping = () => {
     return (
       <>
-        <h3>Shiping method</h3>
+        <h3>Shipping method</h3>
         <div className={styles.shippMethod}>
           <div className={styles.shippRow}>
             <input type='radio' name='usps'/>
