@@ -46,7 +46,15 @@ const Shipping = ({ inputs, setPage }) => {
         </div>
       </div>
       <div className={styles.buttonsRow}>
-        <Link to='/checkout/order/' className={styles.link}>
+        <Link 
+          to='/checkout/order/' 
+          className={styles.link}
+          // On click, clean the cart
+          onClick={() => {
+            localStorage.removeItem('cart');
+            localStorage.removeItem('cartTotal');
+          }}
+        >
           <button className={styles.shippingButton}>
             Checkout order
           </button>
