@@ -1,9 +1,16 @@
 /* cart header */
 .cart-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
   padding-top: 25px;
   width: 100%;
 }
+
+.cart-header span {
+  border-bottom: 1px solid;
+}
+
 .close-cart-btn {
   margin-left: auto;
   margin-right: 10px;
