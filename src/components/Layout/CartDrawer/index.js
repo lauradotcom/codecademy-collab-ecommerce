@@ -17,7 +17,6 @@ const CartDrawer = ({ closeCart }) => {
     <div className={styles.root}>
       <div className={styles.drawerContainer}>
         <CartHeader closeCart={closeCart} />
-        <hr />
         {cart.totalQuantity > 0 ? (
           <>
             <CartProducts products={cart.items} />
