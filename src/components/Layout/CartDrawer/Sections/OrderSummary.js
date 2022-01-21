@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "gatsby";
 //
 import { formatPrice } from "../../../../lib/helpers";
 //
 import * as styles from "./OrderSummary.module.css";
 
-const OrderSummary = ({ cart }) => {
+
+const OrderSummary = ({ cart, closeCart }) => {
   const orderSummaryDetails = [
     ["# of Items:", cart.totalQuantity],
     ["Subtotal", formatPrice(cart.totalPrice)],
@@ -27,16 +29,9 @@ const OrderSummary = ({ cart }) => {
       </div>
 
       <div className={styles.btnContainer}>
-        <button
-          className={styles.btn}
-          onClick={() =>
-            alert(
-              `Purchasing ${cart.totalQuantity} items for $${cart.totalPrice}`
-            )
-          }
-        >
+        <Link to="/checkout" className={styles.btn} onClick={closeCart} >
           Proceed with Order
-        </button>
+        </Link>
       </div>
     </div>
   );

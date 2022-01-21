@@ -17,3 +17,53 @@ export const cartTotals = (cart) => {
 
   return { cartQuantity, cartTotalPriceSum };
 };
+
+// form validation!
+export const handleValidation = (state, isShipping = false) => {
+  const inputs = state;
+  let errors = {};
+  let formIsValid = true;
+
+  //Email
+  if (!inputs["contactInfo"]) {
+    formIsValid = false;
+    errors["email"] = "Email cannot be empty";
+  }
+
+  //First Name
+  if (!inputs["firstName"]) {
+    formIsValid = false;
+    errors["firstName"] = "First name cannot be empty";
+  }
+
+  //Last Name
+  if (!inputs["lastName"]) {
+    formIsValid = false;
+    errors["lastName"] = "Last name cannot be empty";
+  }
+
+  //address
+  if (
+    !inputs["address"] ||
+    !inputs["city"] ||
+    !inputs["country"] ||
+    !inputs["state"] ||
+    !inputs["zipCode"]
+  ) {
+    formIsValid = false;
+    errors["address"] = "Missing address information";
+  }
+
+  if (isShipping) {
+    //shipping
+    if (!inputs["shipping"]) {
+      formIsValid = false;
+      errors["address"] = "Please choose a shipping option!";
+    }
+  }
+
+  return {
+    valid: formIsValid,
+    errors: errors,
+  };
+};
