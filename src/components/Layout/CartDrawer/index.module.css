@@ -18,9 +18,15 @@
 }
 
 .drawer-container {
-  width: 50%;
+  width: 100%;
   max-width: 500px;
   height: 100%;
   margin-left: auto;
   background-color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .drawer-container {
+  width: 50%;
+  }
 }
