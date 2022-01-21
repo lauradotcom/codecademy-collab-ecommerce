@@ -73,8 +73,15 @@
   background-color: #6767AB;
   color: white;
 }
+.shipping-button {
+  /* Give a green color of success */
+  background-color: #78ab67;
+}
 .back-button {
   background-color: transparent;
   border: 1px solid #6767AB;
   color: darkslategray;
+}
+.link, button {
+  cursor: pointer;
 }

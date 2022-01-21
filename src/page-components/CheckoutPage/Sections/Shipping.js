@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'gatsby';
 //
 import * as styles from "./Shipping.module.css";
 
@@ -45,9 +46,11 @@ const Shipping = ({ inputs, setPage }) => {
         </div>
       </div>
       <div className={styles.buttonsRow}>
-        <button className={styles.shippingButton}>
-          Checkout order
-        </button>
+        <Link to='/checkout/order/' className={styles.link}>
+          <button className={styles.shippingButton}>
+            Checkout order
+          </button>
+        </Link>
         <button className={styles.backButton} onClick={() => {setPage('Information')}}>
           Back
         </button>
