@@ -31,24 +31,34 @@ const CheckoutPage = () => {
   const Breadcrumb = () => {
     return (
       <div className={styles.breadcrumb}>
-        <span 
-          id={styles.info} 
-          onClick={() => {setPage('Information');}}
+        <span
+          id={styles.info}
+          onClick={() => {
+            setPage("Information");
+          }}
+          onKeyPress={() => setPage("Information")}
+          tabIndex={0}
+          role="button"
         >
           Information
         </span>
-        <span> 
+        <span>
           {/* Display an angle bracket here */}
           --
         </span>
-        <span 
-          id={styles.shipp} 
-          onClick={() => {setPage('Shipping');}}
+        <span
+          id={styles.shipp}
+          onClick={() => {
+            setPage("Shipping");
+          }}
+          onKeyPress={() => setPage("Shipping")}
+          tabIndex={0}
+          role="button"
         >
           Shipping
         </span>
       </div>
-    )
+    );
   }
 
   

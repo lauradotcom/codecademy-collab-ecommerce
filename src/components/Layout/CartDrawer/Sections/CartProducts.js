@@ -88,6 +88,9 @@ const CartProducts = ({ products }) => {
           <a
             className={styles.removeButton}
             onClick={() => updateItemQuantity(product, false, true)}
+            onKeyPress={() => updateItemQuantity(product, false, true)}
+            tabIndex={0}
+            role="button"
           >
             Remove
           </a>

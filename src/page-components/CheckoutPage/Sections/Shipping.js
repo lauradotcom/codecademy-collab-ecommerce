@@ -30,7 +30,7 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
     dispatch(clearItems());
     navigate("/checkout/order/", { replace: true });
   };
-  
+
   return (
     <>
       <h1>Checkout</h1>
@@ -39,7 +39,14 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
         <div className={styles.infoRow}>
           <p>Contact</p>
           <p>{inputs.contactInfo}</p>
-          <span onClick={() => setPage("Information")}>Change</span>
+          <span
+            onClick={() => setPage("Information")}
+            onKeyPress={() => setPage("Information")}
+            tabIndex={0}
+            role="button"
+          >
+            Change
+          </span>
         </div>
         <div className={styles.rowDivider} />
         <div className={styles.infoRow}>
@@ -47,13 +54,21 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
           <p>{`${inputs.address}${
             inputs.apartment ? ` ${inputs.apartment}` : ""
           }, ${inputs.city}, ${inputs.zipCode}`}</p>
-          <span onClick={() => setPage("Information")}>Change</span>
+          <span
+            onClick={() => setPage("Information")}
+            onKeyPress={() => setPage("Information")}
+            tabIndex={0}
+            role="button"
+          >
+            Change
+          </span>
         </div>
       </div>
       <h3>Shipping method</h3>
       <div className={styles.shippMethod}>
         <div className={styles.shippRow}>
           <input
+            id="usps"
             type="radio"
             name="shipping"
             value="usps"
@@ -61,7 +76,7 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
           />
           <div className={styles.childrens}>
             <div>
-              <label>USPS Priority Mail</label>
+              <label htmlFor="usps">USPS Priority Mail</label>
               <p>5 business days</p>
             </div>
             <span>$4.90</span>
@@ -70,6 +85,7 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
         <div className={styles.rowDivider} />
         <div className={styles.shippRow}>
           <input
+            id="usps-express"
             type="radio"
             name="shipping"
             value="usps-express"
@@ -77,7 +93,7 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
           />
           <div className={styles.childrens}>
             <div>
-              <label>USPS Priority Mail Express</label>
+              <label htmlFor="usps-express">USPS Priority Mail Express</label>
               <p>1 business day</p>
             </div>
             <span>$14.90</span>
