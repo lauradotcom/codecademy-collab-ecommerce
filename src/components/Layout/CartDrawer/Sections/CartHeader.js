@@ -1,4 +1,5 @@
 import React from "react";
+import CloseButton from "../../../Buttons/CloseButton";
 //
 import * as styles from "./CartHeader.module.css";
 
@@ -7,9 +8,7 @@ const CartHeader = ({ closeCart }) => {
     <div className={styles.cartHeader}>
       <div></div>
       <h1><span>Shopping Bag</span></h1>
-      <button className={styles.closeCartBtn} onClick={closeCart}>
-        Close
-      </button>
+      <CloseButton closeCart={closeCart} />
     </div>
   );
 };
