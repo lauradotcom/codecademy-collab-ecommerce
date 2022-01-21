@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import ProductActions from '../../page-components/ProductPage/Sections/ProductActions';
 import ProductDetails from '../../page-components/ProductPage/Sections/ProductDetails';
 // styles
-import { main, section, detailsActions } from "../../page-components/ProductPage/ProductPage.module.css";
+import { section, detailsActions } from "../../page-components/ProductPage/ProductPage.module.css";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 function ProductTemplate({ data }) {
