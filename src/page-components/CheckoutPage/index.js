@@ -65,7 +65,7 @@ const CheckoutPage = () => {
     } else {
       document.title = 'Checkout';
     }
-  }, [page])
+  }, [page, inputs])
   
 
   return (
