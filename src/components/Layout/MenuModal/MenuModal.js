@@ -15,9 +15,9 @@ const MenuModal = ({ showMenu, toggleMenu }) => {
     <div className={showMenu ? `${styles.menu} ${styles.open}` : `${styles.menu} ${styles.closed}`}>
       <nav className={styles.nav}>
         <ul>
-        {listItems.map((item) => (
+        {listItems.map((item, index) => (
             <li>
-            <Link to={item.link} onClick={toggleMenu}>{item.name}</Link>
+            <Link to={item.link} onClick={toggleMenu} key={index}>{item.name}</Link>
             </li>
         ))}
         </ul>
