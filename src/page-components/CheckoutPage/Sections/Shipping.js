@@ -1,30 +1,48 @@
 import React from "react";
-import { Link } from 'gatsby';
+import { navigate } from "gatsby";
 //
 import * as styles from "./Shipping.module.css";
+import { handleValidation } from "../../../lib/helpers";
+import { useDispatch } from "react-redux";
+import { clearItems } from "../../../state/cartSlice";
 
-const Shipping = ({ inputs, setPage }) => {
+const Shipping = ({ inputs, setPage, setInputs }) => {
+  const dispatch = useDispatch();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInputs((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   return (
     <>
-    <h1>Checkout</h1>
-    <h3>Contact information</h3>
+      <h1>Checkout</h1>
+      <h3>Contact information</h3>
       <div className={styles.prevInformation}>
         <div className={styles.infoRow}>
           <p>Contact</p>
           <p>{inputs.contactInfo}</p>
-          <span onClick={() => setPage('Information')}>Change</span>
+          <span onClick={() => setPage("Information")}>Change</span>
         </div>
-        <div className={styles.rowDivider}/>
+        <div className={styles.rowDivider} />
         <div className={styles.infoRow}>
           <p>Ship to</p>
-          <p>{`${inputs.address}${inputs.apartment ? ` ${inputs.apartment}` : ''}, ${inputs.city}, ${inputs.zipCode}`}</p>
-          <span onClick={() => setPage('Information')}>Change</span>
+          <p>{`${inputs.address}${
+            inputs.apartment ? ` ${inputs.apartment}` : ""
+          }, ${inputs.city}, ${inputs.zipCode}`}</p>
+          <span onClick={() => setPage("Information")}>Change</span>
         </div>
       </div>
       <h3>Shipping method</h3>
       <div className={styles.shippMethod}>
         <div className={styles.shippRow}>
-          <input type='radio' name='shipping' value='usps'/>
+          <input
+            type="radio"
+            name="shipping"
+            value="usps"
+            onClick={handleChange}
+          />
           <div className={styles.childrens}>
             <div>
               <label>USPS Priority Mail</label>
@@ -33,9 +51,14 @@ const Shipping = ({ inputs, setPage }) => {
             <span>$4.90</span>
           </div>
         </div>
-        <div className={styles.rowDivider}/>
+        <div className={styles.rowDivider} />
         <div className={styles.shippRow}>
-          <input type='radio' name='shipping' value='usps-express' />
+          <input
+            type="radio"
+            name="shipping"
+            value="usps-express"
+            onClick={handleChange}
+          />
           <div className={styles.childrens}>
             <div>
               <label>USPS Priority Mail Express</label>
@@ -46,25 +69,34 @@ const Shipping = ({ inputs, setPage }) => {
         </div>
       </div>
       <div className={styles.buttonsRow}>
-        <Link 
-          to='/checkout/order/' 
-          className={styles.link}
-          // On click, clean the cart
-          onClick={() => {
-            localStorage.removeItem('cart');
-            localStorage.removeItem('cartTotal');
+        <button
+          className={styles.shippingButton}
+          onClick={async function (e) {
+            const { valid, errors } = await handleValidation(inputs, true);
+            if (!valid) {
+              let message = "";
+              for (const prop in errors) {
+                message += errors[prop] + "!\n";
+              }
+              alert(message);
+              return;
+            }
+            setPage("Information");
+            dispatch(clearItems());
+            navigate("/checkout/order/", { replace: true });
           }}
         >
-          <button className={styles.shippingButton}>
-            Checkout order
-          </button>
-        </Link>
-        <button className={styles.backButton} onClick={() => {setPage('Information')}}>
+          Checkout order
+        </button>
+        <button
+          className={styles.backButton}
+          onClick={() => setPage("Information")}
+        >
           Back
         </button>
       </div>
     </>
   );
-}
+};
 
 export default Shipping;

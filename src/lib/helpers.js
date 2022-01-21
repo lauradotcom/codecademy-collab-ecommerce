@@ -19,8 +19,7 @@ export const cartTotals = (cart) => {
 };
 
 // form validation!
-export const handleValidation = (state) => {
-  console.log(state);
+export const handleValidation = (state, isShipping = false) => {
   const inputs = state;
   let errors = {};
   let formIsValid = true;
@@ -28,19 +27,19 @@ export const handleValidation = (state) => {
   //Email
   if (!inputs["contactInfo"]) {
     formIsValid = false;
-    errors["email"] = "Cannot be empty";
+    errors["email"] = "Email cannot be empty";
   }
 
   //First Name
   if (!inputs["firstName"]) {
     formIsValid = false;
-    errors["firstName"] = "Cannot be empty";
+    errors["firstName"] = "First name cannot be empty";
   }
 
   //Last Name
-  if (!inputs["firstName"]) {
+  if (!inputs["lastName"]) {
     formIsValid = false;
-    errors["firstName"] = "Cannot be empty";
+    errors["lastName"] = "Last name cannot be empty";
   }
 
   //address
@@ -53,6 +52,16 @@ export const handleValidation = (state) => {
   ) {
     formIsValid = false;
     errors["address"] = "Missing address information";
+  }
+
+  console.log('Is Shipping is ' + isShipping)
+  console.log(inputs)
+  if (isShipping) {
+    //shipping
+    if (!inputs["shipping"]) {
+      formIsValid = false;
+      errors["address"] = "Please choose a shipping option!";
+    }
   }
 
   return {
