@@ -12,18 +12,26 @@ const MenuModal = ({ showMenu, toggleMenu }) => {
   ];
 
   return (
-    <div className={showMenu ? `${styles.menu} ${styles.open}` : `${styles.menu} ${styles.closed}`}>
+    <div
+      className={
+        showMenu
+          ? `${styles.menu} ${styles.open}`
+          : `${styles.menu} ${styles.closed}`
+      }
+    >
       <nav className={styles.nav}>
         <ul>
-        {listItems.map((item, index) => (
-            <li>
-            <Link to={item.link} onClick={toggleMenu} key={index}>{item.name}</Link>
+          {listItems.map((item, index) => (
+            <li key={index}>
+              <Link to={item.link} onClick={toggleMenu}>
+                {item.name}
+              </Link>
             </li>
-        ))}
+          ))}
         </ul>
       </nav>
     </div>
-  )
+  );
 }
 
 export default MenuModal;
