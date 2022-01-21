@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.inline-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+}
+input {
+  font-size: 1rem;
+  height: 40px;
+  width: 88%;
+  margin: 7px 6px;
+  padding: 0;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(202, 202, 202);
+}
+input:focus {
+  outline: 1px solid #6767AB;
+}
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px;
+}
+.shipping-button, .back-button {
+  width: 170px;
+  height: 55px;
+  font-size: .9rem;
+  border-radius: 5px;
+  background-color: #6767AB;
+  color: white;
+}
+.back-button {
+  background-color: transparent;
+  border: 1px solid #6767AB;
+  color: darkslategray;
+}

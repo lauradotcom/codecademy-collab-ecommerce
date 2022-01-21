@@ -1,0 +1,80 @@
+.shipp-method, .prev-information  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
+}
+.shipp-row, .info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px 20px 20px 0;
+  border-radius: 5px;
+}
+.info-row {
+  padding: 5px 5px 5px 0;
+}
+.row-divider {
+  height: 1px;
+  width: 100%;
+  background-color:rgb(202, 202, 202);
+}
+.shipp-row .childrens {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.childrens p {
+  color: gray;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.shipp-row input {
+  height: 20px;
+  width: 10%;
+}
+.shipp-row input:focus {
+  outline: none;
+}
+.shipp-row label, .info-row p, .info-row span {
+  font-size: .9rem;
+}
+.info-row span {
+  /* Keep the text at the end of the row */
+  color: #6767AB;
+  cursor: pointer;
+}
+.shipp-row p {
+  font-size: .8rem;
+}
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px;
+}
+.shipping-button, .back-button {
+  width: 170px;
+  height: 55px;
+  font-size: .9rem;
+  border-radius: 5px;
+  background-color: #6767AB;
+  color: white;
+}
+.back-button {
+  background-color: transparent;
+  border: 1px solid #6767AB;
+  color: darkslategray;
+}
