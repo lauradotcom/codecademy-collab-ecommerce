@@ -1,6 +1,29 @@
 .root {
+  text-align: center;
 }
+
 .msg {
+  padding: 2.25rem;
+  font-size: 1.15rem;
+  font-weight: 300;
 }
+
 .btn {
+  width: 50%;
+  height: 2.5rem;
+  margin: 2.25rem auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6ff;
+  background-color: #141421;
+  font-weight: 400;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  background-color: #6767ab;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
 }
