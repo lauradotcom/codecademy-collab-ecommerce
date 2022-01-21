@@ -11,13 +11,13 @@ const Shipping = ({ inputs, setPage }) => {
       <div className={styles.prevInformation}>
         <div className={styles.infoRow}>
           <p>Contact</p>
-          <p>longlongusername@example.com</p>
+          <p>{inputs.contactInfo}</p>
           <span onClick={() => setPage('Information')}>Change</span>
         </div>
         <div className={styles.rowDivider}/>
         <div className={styles.infoRow}>
           <p>Ship to</p>
-          <p>Sweet avenue #404, NY, admin</p>
+          <p>{`${inputs.address}${inputs.apartment ? ` ${inputs.apartment}` : ''}, ${inputs.city}, ${inputs.zipCode}`}</p>
           <span onClick={() => setPage('Information')}>Change</span>
         </div>
       </div>

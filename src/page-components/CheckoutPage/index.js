@@ -61,7 +61,7 @@ const CheckoutPage = () => {
       setContent(<Form inputs={inputs} setInputs={setInputs} setPage={setPage}/>);
     } else if (page === 'Shipping') {
       document.title = 'Shipping';
-      setContent(<Shipping setPage={setPage} />);
+      setContent(<Shipping inputs={inputs} setPage={setPage} />);
     } else {
       document.title = 'Checkout';
     }
