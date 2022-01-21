@@ -15,6 +15,22 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
       [name]: value,
     }));
   };
+
+  const handleSubmit = () => {
+    const { valid, errors } = handleValidation(inputs, true);
+    if (!valid) {
+      let message = "";
+      for (const prop in errors) {
+        message += errors[prop] + "!\n";
+      }
+      alert(message);
+      return;
+    }
+    setPage("Information");
+    dispatch(clearItems());
+    navigate("/checkout/order/", { replace: true });
+  };
+  
   return (
     <>
       <h1>Checkout</h1>
@@ -69,23 +85,7 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
         </div>
       </div>
       <div className={styles.buttonsRow}>
-        <button
-          className={styles.shippingButton}
-          onClick={async function (e) {
-            const { valid, errors } = await handleValidation(inputs, true);
-            if (!valid) {
-              let message = "";
-              for (const prop in errors) {
-                message += errors[prop] + "!\n";
-              }
-              alert(message);
-              return;
-            }
-            setPage("Information");
-            dispatch(clearItems());
-            navigate("/checkout/order/", { replace: true });
-          }}
-        >
+        <button className={styles.shippingButton} onClick={handleSubmit}>
           Checkout order
         </button>
         <button

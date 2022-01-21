@@ -54,8 +54,6 @@ export const handleValidation = (state, isShipping = false) => {
     errors["address"] = "Missing address information";
   }
 
-  console.log('Is Shipping is ' + isShipping)
-  console.log(inputs)
   if (isShipping) {
     //shipping
     if (!inputs["shipping"]) {
