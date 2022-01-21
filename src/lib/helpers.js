@@ -17,3 +17,46 @@ export const cartTotals = (cart) => {
 
   return { cartQuantity, cartTotalPriceSum };
 };
+
+// form validation!
+export const handleValidation = (state) => {
+  console.log(state);
+  const inputs = state;
+  let errors = {};
+  let formIsValid = true;
+
+  //Email
+  if (!inputs["contactInfo"]) {
+    formIsValid = false;
+    errors["email"] = "Cannot be empty";
+  }
+
+  //First Name
+  if (!inputs["firstName"]) {
+    formIsValid = false;
+    errors["firstName"] = "Cannot be empty";
+  }
+
+  //Last Name
+  if (!inputs["firstName"]) {
+    formIsValid = false;
+    errors["firstName"] = "Cannot be empty";
+  }
+
+  //address
+  if (
+    !inputs["address"] ||
+    !inputs["city"] ||
+    !inputs["country"] ||
+    !inputs["state"] ||
+    !inputs["zipCode"]
+  ) {
+    formIsValid = false;
+    errors["address"] = "Missing address information";
+  }
+
+  return {
+    valid: formIsValid,
+    errors: errors,
+  };
+};
