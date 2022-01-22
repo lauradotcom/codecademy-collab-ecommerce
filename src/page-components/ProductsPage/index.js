@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 // components
 // page sections
-import ProductImage from "./Sections/ProductImage";
 import ProductPrice from "./Sections/ProductPrice";
 // styles
 import * as styles from "./ProductsPage.module.css";
