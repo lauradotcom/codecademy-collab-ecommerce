@@ -24,7 +24,7 @@ const CartDrawer = ({ closeCart }) => {
             <div className={styles.productsContainer}>
               <CartProducts products={cart.items} />
             </div>
-            <OrderSummary cart={cart} closeCart={closeCart} />
+            <OrderSummary cart={cart} />
             <ActionButton 
               className={styles.actionButton}
               buttonText="Proceed with Order" 
