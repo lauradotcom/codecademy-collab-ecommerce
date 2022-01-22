@@ -38,6 +38,12 @@
 
 .quantity-button {
   background-color: #A6A6B9;
+  font-size: 1.15rem;
+  line-height: 1.15rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: 1px solid #141421;
 }
 
 .quantity-button:hover {
