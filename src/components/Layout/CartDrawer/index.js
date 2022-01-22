@@ -26,6 +26,7 @@ const CartDrawer = ({ closeCart }) => {
             </div>
             <OrderSummary cart={cart} closeCart={closeCart} />
             <ActionButton 
+              className={styles.actionButton}
               buttonText="Proceed with Order" 
               onClick={() => {
                 navigate("/checkout");

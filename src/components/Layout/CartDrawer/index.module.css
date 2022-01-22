@@ -2,6 +2,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
@@ -18,8 +19,12 @@
 }
 
 .drawer-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  max-width: 500px;
   height: 100%;
   margin-left: auto;
   background-color: #F6F6FF;
@@ -31,9 +36,16 @@
   overflow-y: scroll;
 }
 
-@media screen and (min-width: 756px) {
+.action-button {
+  position: absolute;
+  bottom: 3vh;
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 768px) {
   .drawer-container {
     width: 50vw;
+    max-width: 500px;
   }
 }
 
