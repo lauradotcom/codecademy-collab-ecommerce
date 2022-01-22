@@ -31,8 +31,14 @@
   overflow-y: scroll;
 }
 
+@media screen and (min-width: 756px) {
+  .drawer-container {
+    width: 50vw;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .drawer-container {
-  width: 50%;
+  width: 40vw;
   }
 }
