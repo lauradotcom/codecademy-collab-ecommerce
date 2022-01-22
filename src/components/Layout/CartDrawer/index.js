@@ -31,8 +31,7 @@ const CartDrawer = ({ closeCart }) => {
                 navigate("/checkout");
                 closeCart();
               }}
-            >
-            </ActionButton>
+            />
           </>
         ) : (
           <EmptyCartMessage closeCart={closeCart} />
