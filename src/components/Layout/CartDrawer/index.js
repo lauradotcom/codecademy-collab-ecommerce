@@ -16,8 +16,8 @@ const CartDrawer = ({ closeCart }) => {
   const cart = useSelector(cartSelector);
 
   return (
-    <div className={styles.root}>
-      <div className={styles.drawerContainer}>
+    <div className={styles.root} onClick={closeCart}>
+      <div className={styles.drawerContainer} onClick={e => e.stopPropagation()}>
         <CartHeader closeCart={closeCart} />
         {cart.totalQuantity > 0 ? (
           <>
