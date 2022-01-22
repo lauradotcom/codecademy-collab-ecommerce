@@ -64,8 +64,8 @@ const CartProducts = ({ products }) => {
           alt={product.name}
         />
         <div className={styles.productDetails}>
-          <div>{product.name}</div>
-          <div>
+          <div className={styles.productName}>{product.name}</div>
+          <div className={styles.productPrice}>
             {product.discount
               ? formatPrice(product.price * (1 - product.discount))
               : formatPrice(product.price)}

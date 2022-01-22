@@ -10,11 +10,25 @@
 
 /* product details */
 .product-details {
-  margin: 2% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 5%;
 }
 
 .product-details .actions {
   margin-bottom: 7%;
+}
+
+.product-name {
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+
+.product-price {
+  font-weight: 600;
+  margin-bottom: 5%;
 }
 
 .quantity-text {
@@ -29,6 +43,7 @@
 }
 
 .remove-button {
+  font-size: 0.8rem;
   text-decoration: underline;
 }
 
