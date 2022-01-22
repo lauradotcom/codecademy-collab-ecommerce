@@ -1,17 +1,17 @@
 /* product */
 .product-section {
   display: flex;
-  margin: 10px;
+  margin: 10% 5%;
 }
 .product-image {
-  width: 100px;
+  width: 30%;
 }
 /* product details */
 .product-details {
-  margin: 0 0 5px 5px;
+  margin: 2% 5%;
 }
 .product-details .actions {
-  margin-bottom: 5px;
+  margin-bottom: 7%;
 }
 .quantity-text {
   margin: 5px;
