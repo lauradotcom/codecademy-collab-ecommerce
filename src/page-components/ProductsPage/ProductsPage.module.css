@@ -21,9 +21,16 @@ h1 {
   align-items: center;
 }
 
+.image {
+  width: 100%;
+}
+
 @media (min-width: 1024px) {
   .main {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+  }
+    .image {
+    padding: 10%;
   }
 }

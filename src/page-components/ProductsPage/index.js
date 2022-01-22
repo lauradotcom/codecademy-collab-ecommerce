@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 // components
 // page sections
 import ProductImage from "./Sections/ProductImage";
@@ -17,7 +18,11 @@ const ProductsPage = ({ products }) => {
           {products.map((product) => (
             <section key={product.id} className={styles.section}>
               <Link to={`/products/${product.productId}`}>
-                <ProductImage image={product.images[0]} alt={product.name} />
+                <GatsbyImage
+                  className={styles.image}
+                  image={getImage(product.images[0])}
+                  alt={product.name}
+                />
               </Link>
               <div className={styles.detailsActions}>
                 <Link to={`/products/${product.productId}`}>
