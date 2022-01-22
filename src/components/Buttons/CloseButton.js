@@ -1,13 +1,12 @@
 import React from "react";
+import { AiOutlineClose } from "react-icons/ai";
 
 import * as styles from "./CloseButton.module.css";
 
 const CloseButton = ({ closeCart }) => {
 
   return (
-    <button className={styles.closeCartBtn} onClick={closeCart}>
-    Close
-  </button>
+    <AiOutlineClose className={styles.closeCartBtn} onClick={closeCart} />
   )
 }
 
