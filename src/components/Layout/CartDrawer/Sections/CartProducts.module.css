@@ -3,27 +3,35 @@
   display: flex;
   margin: 10% 5%;
 }
+
 .product-image {
   width: 30%;
 }
+
 /* product details */
 .product-details {
   margin: 2% 5%;
 }
+
 .product-details .actions {
   margin-bottom: 7%;
 }
+
 .quantity-text {
   margin: 5px;
 }
+
 .quantity-button {
 }
+
 .quantity-button:hover {
   cursor: pointer;
 }
+
 .remove-button {
   text-decoration: underline;
 }
+
 .remove-button:hover {
   cursor: pointer;
 }
