@@ -2,9 +2,9 @@ import React from "react";
 
 import * as styles from "./ActionButton.module.css";
 
-const ActionButton = ({ buttonText, onClick, closeCart }) => {
+const ActionButton = ({ buttonText, onClick }) => {
   return (
-    <button className={styles.btnAction} onClick={closeCart}>
+    <button className={styles.btnAction} onClick={onClick}>
       {buttonText}
     </button>
   )

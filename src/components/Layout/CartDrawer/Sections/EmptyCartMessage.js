@@ -7,7 +7,7 @@ const EmptyCartMessage = ({ closeCart }) => {
   return (
     <div className={styles.root}>
       <div className={styles.msg}>Your bag is currently empty.</div>
-      <ActionButton buttonText="Continue Shopping" closeCart={closeCart} />
+      <ActionButton buttonText="Continue Shopping" onClick={closeCart} />
     </div>
   );
 };
