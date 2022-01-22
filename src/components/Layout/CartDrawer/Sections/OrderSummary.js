@@ -8,17 +8,17 @@ import * as styles from "./OrderSummary.module.css";
 
 const OrderSummary = ({ cart, closeCart }) => {
   const orderSummaryDetails = [
-    ["# of Items:", cart.totalQuantity],
+    ["# of Items", cart.totalQuantity],
     ["Subtotal", formatPrice(cart.totalPrice)],
-    ["Shipping:", "FREE!"],
-    ["Estimated Tax:", "Calculated at Checkout"],
-    ["Total:", formatPrice(cart.totalPrice)],
+    ["Shipping", "FREE!"],
+    ["Estimated Tax", "Calculated at Checkout"],
+    ["Total", formatPrice(cart.totalPrice)],
   ];
 
   return (
     <div className={styles.orderSummary}>
-      <div className={styles.title}>Order Summary</div>
-
+      <h2 className={styles.title}>Order Summary</h2>
+      <hr />
       <div className={styles.details}>
         {orderSummaryDetails.map((item, i) => (
           <div key={item[0]} className={styles.item}>
@@ -27,7 +27,7 @@ const OrderSummary = ({ cart, closeCart }) => {
           </div>
         ))}
       </div>
-
+      <hr />
       <div className={styles.btnContainer}>
         <Link to="/checkout" className={styles.btn} onClick={closeCart} >
           Proceed with Order
