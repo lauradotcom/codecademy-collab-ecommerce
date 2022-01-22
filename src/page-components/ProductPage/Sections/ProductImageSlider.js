@@ -28,15 +28,16 @@ const ProductImageSlider = ({ product }) => {
         <button onClick={decrement}>{"<"}</button>
         <GatsbyImage
           image={getImage(product.images[imageIndex])}
-          alt={product.title}
+          alt={product.name}
         />
         <button onClick={increment}>{">"}</button>
       </div>
       <div className={styles.gallery}>
         {product.images.map((image, index) => (
           <GatsbyImage
+            key={index}
             image={getImage(image)}
-            alt={product.title + " #" + index}
+            alt={product.name + " #" + index}
             onClick={() => imageChangeHandler(index)}
           />
         ))}

@@ -1,3 +1,7 @@
+.slider {
+  display: flex;
+}
+
 .gallery {
   display: flex;
   flex-flow: row;
