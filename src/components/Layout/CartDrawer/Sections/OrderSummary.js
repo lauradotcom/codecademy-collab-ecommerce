@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 //
+import ActionButton from "../../../Buttons/ActionButton";
 import { formatPrice } from "../../../../lib/helpers";
 //
 import * as styles from "./OrderSummary.module.css";
@@ -28,11 +29,14 @@ const OrderSummary = ({ cart, closeCart }) => {
         ))}
       </div>
       <hr />
-      <div className={styles.btnContainer}>
-        <Link to="/checkout" className={styles.btn} onClick={closeCart} >
-          Proceed with Order
-        </Link>
-      </div>
+      <ActionButton 
+        buttonText="Proceed with Order" 
+        onClick={() => {
+          navigate("/checkout");
+          closeCart();
+        }}
+      >
+      </ActionButton>
     </div>
   );
 };
