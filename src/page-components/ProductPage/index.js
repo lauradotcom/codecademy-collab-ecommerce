@@ -1,24 +1,26 @@
 import React from "react";
 
-import ProductActions from "../ProductsPage/Sections/ProductActions";
-import ProductDetails from "../ProductsPage/Sections/ProductDetails";
+import ProductActions from "./Sections/ProductActions";
+import ProductDetails from "./Sections/ProductDetails";
 // styles
 import {
+  main,
   section,
   detailsActions,
-} from "../../page-components/ProductsPage/ProductsPage.module.css";
+} from "./ProductPage.module.css";
 import ProductImageSlider from "../../page-components/ProductPage/Sections/ProductImageSlider";
 
 function ProductPage({ product }) {
-
   return (
-    <section key={product.id} className={section}>
-      <ProductImageSlider product={product} />
+    <main className={main}>
+      <section className={section}>
+        <ProductImageSlider product={product} />
+      </section>
       <div className={detailsActions}>
         <ProductDetails product={product} />
         <ProductActions product={product} />
       </div>
-    </section>
+    </main>
   );
 }
 
