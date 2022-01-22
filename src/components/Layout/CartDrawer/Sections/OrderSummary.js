@@ -29,14 +29,7 @@ const OrderSummary = ({ cart, closeCart }) => {
         ))}
       </div>
       <hr />
-      <ActionButton 
-        buttonText="Proceed with Order" 
-        onClick={() => {
-          navigate("/checkout");
-          closeCart();
-        }}
-      >
-      </ActionButton>
+
     </div>
   );
 };

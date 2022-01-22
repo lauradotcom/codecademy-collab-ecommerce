@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 //
 import { useSelector } from "react-redux";
 import { cartSelector } from "../../../state/cartSlice";
@@ -7,6 +8,7 @@ import CartHeader from "./Sections/CartHeader";
 import CartProducts from "./Sections/CartProducts";
 import OrderSummary from "./Sections/OrderSummary";
 import EmptyCartMessage from "./Sections/EmptyCartMessage";
+import ActionButton from "../../Buttons/ActionButton";
 //
 import * as styles from "./index.module.css";
 
@@ -23,6 +25,14 @@ const CartDrawer = ({ closeCart }) => {
               <CartProducts products={cart.items} />
             </div>
             <OrderSummary cart={cart} closeCart={closeCart} />
+            <ActionButton 
+              buttonText="Proceed with Order" 
+              onClick={() => {
+                navigate("/checkout");
+                closeCart();
+              }}
+            >
+            </ActionButton>
           </>
         ) : (
           <EmptyCartMessage closeCart={closeCart} />
