@@ -1,7 +1,5 @@
 import React from "react";
-import { navigate } from "gatsby";
 //
-import ActionButton from "../../../Buttons/ActionButton";
 import { formatPrice } from "../../../../lib/helpers";
 //
 import * as styles from "./OrderSummary.module.css";
