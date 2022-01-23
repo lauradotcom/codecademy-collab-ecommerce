@@ -1,9 +1,42 @@
 .slider {
   display: flex;
+  position: relative;
+}
+
+.previous-image {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.next-image {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.next-image:hover,
+.previous-image:hover {
+  background-color: rgba(78, 78, 78, 0.5);
+}
+
+.next-image:active,
+.previous-image:active {
+  background-color: #6767ab6c;
 }
 
 .gallery {
-  display: flex;
-  flex-flow: row;
+  display: grid;
+  margin-top: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
+  column-gap: 1rem;
+}
+
+.selectedImage {
+  opacity: .5;
 }
