@@ -19,6 +19,8 @@ const CartDrawer = ({ closeCart, showCart }) => {
     <div 
       className={styles.root} 
       onClick={closeCart}
+      onKeyPress={closeCart}
+      aria-hidden="true"
     >
       <div 
         className={
@@ -26,7 +28,10 @@ const CartDrawer = ({ closeCart, showCart }) => {
           ? `${styles.drawerContainer} ${styles.open}`
           : `${styles.drawerContainer} ${styles.closed}`
         } 
-        onClick={e => e.stopPropagation()}>
+        onClick={e => e.stopPropagation()}
+        onKeyPress={e => e.stopPropagation()}
+        role="dialog"
+      >
         <CartHeader closeCart={closeCart} />
         {cart.totalQuantity > 0 ? (
           <>
