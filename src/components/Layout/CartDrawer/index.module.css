@@ -1,26 +1,145 @@
 .root {
   position: fixed;
+  top: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 
-@media (max-width: 700px) {
-  .root {
-    top: 54px;
-  }
+.drawer-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  background-color: #F6F6FF;
+  z-index: 1;
+  opacity: 0;
 }
-@media (min-width: 701px) and (min-height: 600px) {
-  .root {
-    top: 72px;
+
+.open {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.1s;
+}
+
+.closed {
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease-out 0.1s;
+  animation: close-overlay 0.3s;
+}
+
+.products-container {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.action-button {
+  position: absolute;
+  bottom: 3vh;
+  margin-bottom: 5%;
+}
+
+@keyframes close-overlay {
+  0% {
+    z-index: 2;
+  }
+  50% {
+    z-index: 2;
+  }
+  75% {
+    z-index: 2;
+  }
+  90% {
+    z-index: 1;
+  }
+  100% {
+    z-index: -1;
+
   }
 }
 
-.drawer-container {
-  width: 50%;
-  max-width: 500px;
-  height: 100%;
-  margin-left: auto;
-  background-color: white;
+@media screen and (min-width: 768px) {
+  .drawer-container {
+    width: 0;
+  }
+
+  .open {
+    width: 50vw;
+    max-width: 500px;
+    transition: none;
+    animation: slide-in 0.2s;
+  }
+
+  .closed {
+    width: 0;
+    animation: slide-out 0.2s;
+  }
+  
+  @keyframes slide-in {
+    0% { 
+      width: 0;
+    }
+    50% {
+      width: 25vw;
+    }
+    100% {
+      width: 50vw;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      width: 50vw;
+      z-index: 2;
+    }
+    50% {
+      width: 25vw;
+      z-index: 2;
+    }
+    100% {
+      width: 0;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .open {
+    width: 40vw;
+  }
+
+  @keyframes slide-in {
+    0% { 
+      width: 0;
+    }
+    50% {
+      width: 20vw;
+    }
+    100% {
+      width: 40vw;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      width: 40vw;
+      z-index: 2;
+    }
+    50% {
+      width: 20vw;
+      z-index: 2;
+    }
+    100% {
+      width: 0;
+      z-index: -1;
+    }
+  }
 }

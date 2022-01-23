@@ -1,6 +1,10 @@
 .root {
+  text-align: center;
 }
+
 .msg {
+  padding: 2.25rem;
+  font-size: 1.15rem;
+  font-weight: 300;
 }
-.btn {
-}
+

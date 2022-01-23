@@ -9,6 +9,24 @@ body {
   color: #141421;
 }
 
+h1 {
+  font-family: 'Varela', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Varela', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
 /* Override Default Button Styles */
 
 button {
