@@ -10,11 +10,18 @@ const Header = ({ showMenu, toggleCart, toggleMenu }) => {
 
   return (
     <header className={styles.header}>
-      <HamburgerMenu className={styles.menuIcon} showMenu={showMenu} toggleMenu={toggleMenu} />
+      <HamburgerMenu 
+        className={styles.menuIcon} 
+        showMenu={showMenu} 
+        toggleMenu={toggleMenu}
+      />
       <Link to='/' className={styles.homeLink}>
         <p>EcommStore</p>
       </Link>
-      <CartButton className={styles.menuIcon} toggleCart={toggleCart} />
+      <CartButton 
+        className={styles.menuIcon} 
+        toggleCart={toggleCart}
+      />
     </header>
   );
 };

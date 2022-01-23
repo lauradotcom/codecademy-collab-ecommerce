@@ -15,6 +15,9 @@ const Layout = ({ children }) => {
 
   const toggleCart = () => {
     setShowCart(!showCart);
+    if (showMenu) {
+      setShowMenu(false);
+    }
   };
 
   // Local state to handle showing menu modal/overlay
@@ -22,6 +25,9 @@ const Layout = ({ children }) => {
   
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    if (showCart) {
+      setShowCart(false);
+    }
   };
 
   return (
