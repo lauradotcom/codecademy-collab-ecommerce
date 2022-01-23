@@ -6,7 +6,9 @@ const ProductDetails = ({ product }) => {
   return (
     <div className={styles.root}>
       <h2 className={styles.productTitle}>{product.name}</h2>
-      <ProductPrice product={product} />
+      <div className={styles.productPrice}>
+        <ProductPrice product={product} />
+      </div>
       <p>{product.description}</p>
     </div>
   );

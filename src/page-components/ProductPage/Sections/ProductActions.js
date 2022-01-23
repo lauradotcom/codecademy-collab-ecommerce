@@ -3,11 +3,16 @@ import { useDispatch } from "react-redux";
 // components
 import Button from "../../../components/Buttons/MainButton";
 import { addItem } from "../../../state/cartSlice";
+import ProductPrice from "../../ProductsPage/Sections/ProductPrice";
 // styles
 import {
   root,
   quantityButton,
   quantityText,
+  addToCartDesktop,
+  addToCart,
+  productPrice,
+  addToCartButton,
 } from "./ProductActions.module.css";
 
 const ProductActions = ({ product }) => {
@@ -42,11 +47,14 @@ const ProductActions = ({ product }) => {
           +
         </button>
       </div>
-      <Button onClick={addItemToCart} buttonText="Add to cart" />
-      <div>
-        <span>Free shipping on orders over $50*</span>
-        <br />
-        <span>Return policy</span>
+      <div className={addToCartDesktop}>
+        <Button onClick={addItemToCart} buttonText="Add to cart" />
+      </div>
+      <div className={addToCart}>
+        <ProductPrice className={productPrice} product={product} />
+        <div className={addToCartButton}>
+          <Button onClick={addItemToCart} buttonText="Add to cart" />
+        </div>
       </div>
     </div>
   );

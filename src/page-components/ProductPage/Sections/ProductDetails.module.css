@@ -1,11 +1,19 @@
 .root {
   display: flex;
   flex-direction: column;
-  padding: 5% 10%;
 }
 
 .product-title {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 7%;
+}
+
+.product-price {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .product-price {
+    display: initial;
+  }
 }
