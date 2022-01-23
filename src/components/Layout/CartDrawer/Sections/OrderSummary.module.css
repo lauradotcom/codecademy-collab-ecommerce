@@ -12,7 +12,12 @@
 }
 
 .order-summary .details .item {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.order-summary .details .total {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .order-summary .details .left {

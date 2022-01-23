@@ -7,12 +7,12 @@ import * as styles from "./OrderSummary.module.css";
 
 const OrderSummary = ({ cart, closeCart }) => {
   const orderSummaryDetails = [
-    ["# of Items", cart.totalQuantity],
     ["Subtotal", formatPrice(cart.totalPrice)],
     ["Shipping", "FREE!"],
     ["Estimated Tax", "Calculated at Checkout"],
-    ["Total", formatPrice(cart.totalPrice)],
   ];
+
+  const orderTotal = ["Total", formatPrice(cart.totalPrice)];
 
   return (
     <div className={styles.orderSummary}>
@@ -27,7 +27,12 @@ const OrderSummary = ({ cart, closeCart }) => {
         ))}
       </div>
       <hr />
-
+      <div className={styles.details}>
+      <div className={styles.total}>
+        <span className={styles.left}>{orderTotal[0]}</span>
+        <span className={styles.right}>{orderTotal[1]}</span>
+      </div>
+      </div>
     </div>
   );
 };
