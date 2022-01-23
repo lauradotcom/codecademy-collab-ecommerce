@@ -1,7 +1,6 @@
 .main {
-  width: 110px;
+  width: 100%;
   height: 40px;
-  margin: 2.25rem;
   padding: 1rem;
   display: flex;
   align-items: center;

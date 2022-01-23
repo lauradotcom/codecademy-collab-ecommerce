@@ -26,14 +26,14 @@ h3 {
   background-color: rgb(202, 202, 202);
   height: 1px;
   width: 90%;
+  margin: auto;
   border-radius: 2px;
 }
 
 .subtotal-container {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  margin-right: 10%;
+  margin: 0 10%;
 }
 .sub-l {
   float: left;
@@ -44,7 +44,7 @@ h3 {
 }
 
 .total-price-container {
-  margin-right: 10%;
+  margin: 0 10%;
 }
 .total {
   float: left;

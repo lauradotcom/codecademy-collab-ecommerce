@@ -7,19 +7,22 @@
 }
 
 .quantity-text {
-  margin: 10px;
-  font-size: 1.4rem;
-  user-select: none;
+  font-size: 1.15rem;
+  margin: 0 10px;
+  padding: 0 0.5rem;
+  border: 1px solid black;
 }
 
 .quantity-button {
-  margin: 5px;
-  height: 30px;
-  width: 30px;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  border: none;
+  background-color: #a6a6b9;
+  font-size: 1.15rem;
+  line-height: 1.15rem;
+  width: 1.625rem;
+  height: 1.625rem;
+  padding: 0;
+  border: 1px solid #141421;
 }
+
 .quantity-button:active {
   background-color: #6767ab;
   color: #f6f6ff;
@@ -27,4 +30,38 @@
 
 .additional-info {
   color: gray;
+}
+
+.add-to-cart-desktop {
+  display: none;
+}
+
+.add-to-cart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  background-color: #f6f6ff;
+}
+
+.add-to-cart-button {
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .add-to-cart {
+    display: none;
+  }
+
+  .add-to-cart-desktop {
+    display: flex;
+    margin-top: 2.25rem;
+    width: 80%;
+    justify-content: center;
+  }
 }
