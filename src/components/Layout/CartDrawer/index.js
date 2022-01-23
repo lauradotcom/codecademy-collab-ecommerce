@@ -12,12 +12,21 @@ import ActionButton from "../../Buttons/ActionButton";
 //
 import * as styles from "./index.module.css";
 
-const CartDrawer = ({ closeCart }) => {
+const CartDrawer = ({ closeCart, showCart }) => {
   const cart = useSelector(cartSelector);
 
   return (
-    <div className={styles.root} onClick={closeCart}>
-      <div className={styles.drawerContainer} onClick={e => e.stopPropagation()}>
+    <div 
+      className={styles.root} 
+      onClick={closeCart}
+    >
+      <div 
+        className={
+          showCart
+          ? `${styles.drawerContainer} ${styles.open}`
+          : `${styles.drawerContainer} ${styles.closed}`
+        } 
+        onClick={e => e.stopPropagation()}>
         <CartHeader closeCart={closeCart} />
         {cart.totalQuantity > 0 ? (
           <>

@@ -18,7 +18,21 @@
   height: 100%;
   margin-left: auto;
   background-color: #F6F6FF;
+  z-index: 1;
+  opacity: 0;
+}
 
+.open {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.1s;
+}
+
+.closed {
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease-out 0.1s;
+  animation: close-overlay 0.3s;
 }
 
 .products-container {
@@ -32,15 +46,100 @@
   margin-bottom: 5%;
 }
 
+@keyframes close-overlay {
+  0% {
+    z-index: 2;
+  }
+  50% {
+    z-index: 2;
+  }
+  75% {
+    z-index: 2;
+  }
+  90% {
+    z-index: 1;
+  }
+  100% {
+    z-index: -1;
+
+  }
+}
+
 @media screen and (min-width: 768px) {
   .drawer-container {
+    width: 0;
+  }
+
+  .open {
     width: 50vw;
     max-width: 500px;
+    transition: none;
+    animation: slide-in 0.2s;
+  }
+
+  .closed {
+    width: 0;
+    animation: slide-out 0.2s;
+  }
+  
+  @keyframes slide-in {
+    0% { 
+      width: 0;
+    }
+    50% {
+      width: 25vw;
+    }
+    100% {
+      width: 50vw;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      width: 50vw;
+      z-index: 2;
+    }
+    50% {
+      width: 25vw;
+      z-index: 2;
+    }
+    100% {
+      width: 0;
+      z-index: -1;
+    }
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .drawer-container {
-  width: 40vw;
+
+  .open {
+    width: 40vw;
+  }
+
+  @keyframes slide-in {
+    0% { 
+      width: 0;
+    }
+    50% {
+      width: 20vw;
+    }
+    100% {
+      width: 40vw;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      width: 40vw;
+      z-index: 2;
+    }
+    50% {
+      width: 20vw;
+      z-index: 2;
+    }
+    100% {
+      width: 0;
+      z-index: -1;
+    }
   }
 }
