@@ -30,7 +30,7 @@
 
 > 🛍️ 🛒 Simple E-Commerce starter built on Gatsby framework with Redux Toolkit and session persistent shopping cart managed in local storage 🛍️ 🛒
 
-Statically generated Gatsby E-Commerce webapp with page for viewing all products and individual programmatically created product pages. GraphQL queries against local filesystem data store for product information and dynamic routing/programmatic page generation.
+Statically generated Gatsby E-Commerce web app with page for viewing all products and individual programmatically created product pages. GraphQL queries against local filesystem data store for product information and dynamic routing/programmatic page generation.
 
 ---
 
@@ -63,7 +63,7 @@ npm run start || gatsby start
 Clear cache between builds:
 
 ```bash
-gatsby clean
+npm run clean || gatsby clean
 ```
 
 ---
@@ -80,7 +80,7 @@ The folder [/src/state](https://github.com/lauradotcom/codecademy-collab-ecommer
 
 ### Folder Structure
 
-1. [/src/pages](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/pages) - top-level page render.
+1. [/src/pages](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/pages) - top-level page render
 
    - Product data queries
    - Page head
@@ -96,19 +96,19 @@ The folder [/src/state](https://github.com/lauradotcom/codecademy-collab-ecommer
 3. [/src/components](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/components) - contains shared/global components and their scoped stylesheets
 
    - Layout (Header, Nav, CartDrawer) - renders on all pages globally
-   - Shared components - Basic re-useable components, like Buttons
+   - Shared components - Basic reusable components, including buttons
      <br/><br/>
 
-4. [/src/lib](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/lib) - library containing helper functions like formatters, validators, reducers
+4. [/src/lib](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/lib) - library containing helper functions like formatters, validators, and reducers
    <br/><br/>
 
-5. [/src/data](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/data) - contains product information data in json document
+5. [/src/data](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/data) - contains product information data in JSON document
    <br/><br/>
 
 6. [/src/images](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/images) - contains image assets
    <br/><br/>
 
-7. [/src/styles](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/images) - contains global styles and CSS overrides
+7. [/src/styles](https://github.com/lauradotcom/codecademy-collab-ecommerce/tree/main/src/styles) - contains global styles and CSS overrides
    <br/><br/>
 
 ---
