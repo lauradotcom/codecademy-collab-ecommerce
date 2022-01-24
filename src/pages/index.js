@@ -1,8 +1,8 @@
 import * as React from 'react';
-import IndexPage from '../page-components/IndexPage';
+import HomePage from '../page-components/HomePage';
 
-const Index = () => {
-  return <IndexPage />;
+const Home = () => {
+  return <HomePage />;
 };
 
-export default Index;
+export default Home;
