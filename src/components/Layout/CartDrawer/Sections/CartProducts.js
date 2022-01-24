@@ -17,7 +17,7 @@ const query = graphql`
         id
         images {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
         name
