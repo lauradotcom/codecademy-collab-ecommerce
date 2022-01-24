@@ -9,28 +9,10 @@ h1 {
   align-items: center;
 }
 
-.section {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.details-actions {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.image {
-  width: 100%;
-}
-
 @media (min-width: 1024px) {
   .main {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
   }
-    .image {
-    padding: 10%;
-  }
+
 }

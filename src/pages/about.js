@@ -1,14 +1,14 @@
 import { graphql } from "gatsby";
-import * as React from "react";
+import React from "react";
 import Seo from "../components/SEO";
-import HomePage from "../page-components/HomePage";
+import AboutPage from "../page-components/AboutPage";
 
-const Home = ({ data }) => {
+const About = ({ data }) => {
   const products = data.allProductsJson.nodes;
   return (
     <>
-      <Seo title="Home" />
-      <HomePage products={products} />
+      <Seo title="About" description="Here is a little bit about us and our products. Check us out!" />
+      <AboutPage products={products} />
     </>
   );
 };
@@ -32,4 +32,4 @@ export const query = graphql`
   }
 `;
 
-export default Home;
+export default About;

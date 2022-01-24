@@ -27,7 +27,7 @@ const ProductImageSlider = ({ product }) => {
     <>
       <div className={styles.slider}>
         <GatsbyImage
-          fadeIn={true}
+          fadein='true'
           image={getImage(product.images[imageIndex])}
           alt={product.name}
         />
@@ -45,9 +45,7 @@ const ProductImageSlider = ({ product }) => {
         {product.images.map((image, index) => (
           <GatsbyImage
             key={index}
-            className={`${styles.galleryImage} ${
-              imageIndex === index ? styles.selectedImage : ""
-            }`}
+            className={imageIndex === index ? styles.selectedImage : ""}
             image={getImage(image)}
             alt={product.name + " #" + index}
             onClick={() => imageChangeHandler(index)}

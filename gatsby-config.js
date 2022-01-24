@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "gatsby1",
+    title: "E-Commerce Store",
+    titleTemplate: "%s · E-Commerce Store",
+    description:
+      "Any ecommerce template for easy plug-n-play product pages and graphql support.",
+    url: "https://www.doe.com", // No trailing slash allowed!
+    image: "/product5-3.jpg", // Path to the image placed in the 'static' folder, in the project's root directory.
   },
   plugins: [
     "gatsby-plugin-image",

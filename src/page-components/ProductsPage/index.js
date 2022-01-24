@@ -1,11 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-// components
-// page sections
-import ProductPrice from "./Sections/ProductPrice";
-// styles
-import * as styles from "./ProductsPage.module.css";
+import { main } from "./ProductsPage.module.css";
+import ProductCard from "./Sections/ProductCard";
 
 const ProductsPage = ({ products }) => {
   return (
@@ -13,23 +8,9 @@ const ProductsPage = ({ products }) => {
       <title>Products Page</title>
       <main>
         <h1>Products Page</h1>
-        <section className={styles.main}>
+        <section className={main}>
           {products.map((product) => (
-            <section key={product.id} className={styles.section}>
-              <Link to={`/products/${product.productId}`}>
-                <GatsbyImage
-                  className={styles.image}
-                  image={getImage(product.images[0])}
-                  alt={product.name}
-                />
-              </Link>
-              <div className={styles.detailsActions}>
-                <Link to={`/products/${product.productId}`}>
-                  <h2>{product.name}</h2>
-                </Link>
-                <ProductPrice product={product} />
-              </div>
-            </section>
+            <ProductCard key={product.id} product={product} />
           ))}
         </section>
       </main>
