@@ -9,14 +9,15 @@ const ProductCard = ({ product }) => {
     <section key={product.id} className={styles.section}>
       <Link to={`/products/${product.productId}`}>
         <GatsbyImage
-          className={styles.image}
+          className={styles.imageContainer}
+          imgClassName={styles.image}
           image={getImage(product.images[0])}
           alt={product.name}
         />
       </Link>
       <div className={styles.detailsActions}>
         <Link to={`/products/${product.productId}`}>
-          <h2>{product.name}</h2>
+          <h2 className={styles.productName}>{product.name}</h2>
         </Link>
         <ProductPrice product={product} />
       </div>
