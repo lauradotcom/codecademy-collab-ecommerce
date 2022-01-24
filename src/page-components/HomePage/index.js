@@ -5,7 +5,7 @@ import { navigate } from "gatsby";
 import ProductCard from "../ProductsPage/Sections/ProductCard";
 
 const HomePage = ({ products }) => {
-  const featuredProducts = products.slice(0, 3);
+  const featuredProducts = products.slice(products.length - 3, products.length);
   return (
     <main>
       <section className={styles.hero}>

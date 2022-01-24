@@ -1,6 +1,29 @@
 .section {
   display: grid;
   grid-template-columns: 1fr;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgba(255, 255, 255, 0.1), 0.3em 0.3em 1em rgba(100, 100, 171, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.section:hover {
+  transform: scale(1.01);
+}
+
+.image-container {
+  width: 100%;
+}
+.image {
+  border-radius: 5px 5px 0 0;
+}
+
+@media (min-width: 1024px) {
+  .image-container {
+    padding: 10%;
+  }
 }
 
 .details-actions {
@@ -10,12 +33,6 @@
   align-items: center;
 }
 
-.image {
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-    .image {
-    padding: 10%;
-  }
+.product-name {
+  margin-bottom: 0;
 }
