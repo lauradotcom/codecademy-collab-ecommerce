@@ -1,10 +1,16 @@
 import { graphql } from "gatsby";
 import * as React from "react";
+import Seo from "../components/SEO";
 import HomePage from "../page-components/HomePage";
 
 const Home = ({ data }) => {
   const products = data.allProductsJson.nodes;
-  return <HomePage products={products} />;
+  return (
+    <>
+      <Seo title="Home" />
+      <HomePage products={products} />
+    </>
+  );
 };
 
 export const query = graphql`

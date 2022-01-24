@@ -1,14 +1,16 @@
-import React from 'react'
-import { graphql } from 'gatsby';
-import ProductPage from '../../page-components/ProductPage';
-
-
+import React from "react";
+import { graphql } from "gatsby";
+import Seo from '../../components/SEO'
+import ProductPage from "../../page-components/ProductPage";
 
 function ProductTemplate({ data }) {
   const product = data.productsJson;
 
   return (
-    <ProductPage product={product} />
+    <>
+      <Seo title={product.name} description={product.description} />
+      <ProductPage product={product} />
+    </>
   );
 }
 
@@ -30,4 +32,4 @@ export const query = graphql`
   }
 `;
 
-export default ProductTemplate
+export default ProductTemplate;
