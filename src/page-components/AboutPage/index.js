@@ -6,7 +6,7 @@ import { navigate } from "gatsby";
 import ProductCard from "../ProductsPage/Sections/ProductCard";
 
 const AboutPage = ({ products }) => {
-  const featuredProducts = products.slice(0, 3);
+  const featuredProducts = products.slice(products.length - 3, products.length);
   return (
     <main className={page}>
       <section className={aboutPage}>
