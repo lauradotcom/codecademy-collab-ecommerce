@@ -1,8 +1,29 @@
-import * as React from 'react';
-import HomePage from '../page-components/HomePage';
+import { graphql } from "gatsby";
+import * as React from "react";
+import HomePage from "../page-components/HomePage";
 
-const Home = () => {
-  return <HomePage />;
+const Home = ({ data }) => {
+  const products = data.allProductsJson.nodes;
+  return <HomePage products={products} />;
 };
+
+export const query = graphql`
+  {
+    allProductsJson {
+      nodes {
+        discount
+        name
+        price
+        productId
+        id
+        images {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Home;
