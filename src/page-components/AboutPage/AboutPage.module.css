@@ -1,0 +1,44 @@
+.page {
+  width: 90vw;
+  max-width: 1120px;
+  margin: 0 auto;
+  min-height: calc(100vh - (6rem + 4rem));
+}
+
+.about-page h2 {
+  text-transform: none;
+  font-weight: bold;
+}
+.about-page {
+  display: grid;
+  gap: 2rem 4rem;
+  padding-bottom: 3rem;
+}
+/* .about-img {
+  border-radius: var(--borderRadius);
+  height: 500px;
+} */
+
+@media screen and (min-width: 768px) {
+  .about-page {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 400px;
+  }
+  .about-img {
+    height: 100%;
+  }
+}
+
+.featured-products-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .featured-products-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+  }
+}
