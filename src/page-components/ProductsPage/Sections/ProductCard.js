@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ProductPrice from "./ProductPrice";
-import * as styles from "../ProductsPage.module.css";
+import * as styles from "./ProductCard.module.css";
 
 const ProductCard = ({ product }) => {
   return (

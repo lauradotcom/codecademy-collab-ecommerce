@@ -11,7 +11,6 @@ import {
   quantityText,
   addToCartDesktop,
   addToCart,
-  productPrice,
   addToCartButton,
 } from "./ProductActions.module.css";
 
@@ -51,7 +50,7 @@ const ProductActions = ({ product }) => {
         <Button onClick={addItemToCart} buttonText="Add to cart" />
       </div>
       <div className={addToCart}>
-        <ProductPrice className={productPrice} product={product} />
+        <ProductPrice product={product} />
         <div className={addToCartButton}>
           <Button onClick={addItemToCart} buttonText="Add to cart" />
         </div>

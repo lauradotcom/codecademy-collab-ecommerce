@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "./ProductsPage.module.css";
+import { main } from "./ProductsPage.module.css";
 import ProductCard from "./Sections/ProductCard";
 
 const ProductsPage = ({ products }) => {
@@ -8,7 +8,7 @@ const ProductsPage = ({ products }) => {
       <title>Products Page</title>
       <main>
         <h1>Products Page</h1>
-        <section className={styles.main}>
+        <section className={main}>
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
