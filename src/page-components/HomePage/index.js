@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import * as styles from "./HomePage.module.css";
 
 const IndexPage = () => {
@@ -14,7 +13,6 @@ const IndexPage = () => {
             Group 2 E-commerce Page Project
           </span>
         </h1>
-        <p className={styles.paragraph}></p>
       </main>
     </>
   );
