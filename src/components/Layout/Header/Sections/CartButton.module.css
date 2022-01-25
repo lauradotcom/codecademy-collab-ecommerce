@@ -3,6 +3,11 @@
   cursor: pointer;
 }
 
+.menu-icon:hover {
+  color: #6767AB;
+  transition: all 0.2s ease-in 0.1s;
+}
+
 .cart-button-container {
   display: flex;
 }
