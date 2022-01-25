@@ -1,4 +1,5 @@
-.shipp-method, .prev-information  {
+.shipp-method,
+.prev-information {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +11,8 @@
   border: 1px solid rgb(202, 202, 202);
   border-radius: 5px;
 }
-.shipp-row, .info-row {
+.shipp-row,
+.info-row {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,7 +27,7 @@
 .row-divider {
   height: 1px;
   width: 100%;
-  background-color:rgb(202, 202, 202);
+  background-color: rgb(202, 202, 202);
 }
 .shipp-row .childrens {
   display: flex;
@@ -47,31 +49,40 @@
 .shipp-row input:focus {
   outline: none;
 }
-.shipp-row label, .info-row p, .info-row span {
-  font-size: .9rem;
+.shipp-row label,
+.info-row p,
+.info-row span {
+  font-size: 0.9rem;
 }
 .info-row span {
   /* Keep the text at the end of the row */
-  color: #6767AB;
+  color: #6767ab;
   cursor: pointer;
 }
 .shipp-row p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 .buttons-row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 25px;
+  flex-flow: row;
+  width: 90%;
+  max-width: 500px;
+  margin: 25px auto;
 }
-.shipping-button, .back-button {
-  width: 170px;
-  height: 55px;
-  font-size: .9rem;
-  border-radius: 5px;
-  background-color: #6767AB;
-  color: white;
+.shipping-button,
+.back-button {
+  width: 100%;
+  height: 40px;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6ff;
+  background-color: #6767ab;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
 }
 .shipping-button {
   /* Give a green color of success */
@@ -79,6 +90,20 @@
 }
 .back-button {
   background-color: transparent;
-  border: 1px solid #6767AB;
+  border: 1px solid #6767ab;
   color: darkslategray;
+}
+.shipping-button:hover {
+  border: 2px solid #78ab67;
+  color: #78ab67;
+  background-color: #f6f6ff;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+}
+.back-button:hover {
+  border: 2px solid #6767ab;
+  background-color: #f6f6ff;
+  color: #6767ab;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
 }

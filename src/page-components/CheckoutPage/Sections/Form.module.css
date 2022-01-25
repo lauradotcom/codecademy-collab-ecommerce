@@ -30,21 +30,42 @@ input:focus {
 }
 .buttons-row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 25px;
+  flex-flow: row;
+  width: 90%;
+  max-width: 500px;
+  margin: 25px auto;
 }
 .shipping-button, .back-button {
-  width: 170px;
-  height: 55px;
-  font-size: .9rem;
-  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6ff;
   background-color: #6767AB;
-  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
 }
 .back-button {
   background-color: transparent;
   border: 1px solid #6767AB;
   color: darkslategray;
+}
+.shipping-button:hover {
+  border: 2px solid #6767ab;
+  background-color: #f6f6ff;
+  color: #6767ab;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+}
+.back-button:hover {
+  border: 2px solid #6767ab;
+  background-color: #f6f6ff;
+  color: #6767ab;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
 }
