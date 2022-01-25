@@ -11,7 +11,7 @@
 .backdrop-open {
   z-index: 1;
   opacity: 1;
-  transition: opacity 0.5s ease-in 0.1s;
+  transition: opacity 0.3s ease-in 0.1s;
 }
 
 .backdrop-closed {
