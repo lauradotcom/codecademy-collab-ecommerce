@@ -1,17 +1,30 @@
-.root {
+.backdrop {
   position: fixed;
-  top: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 0;
+  opacity: 0;
+}
+
+.backdrop-open {
+  z-index: 1;
+  opacity: 1;
+  transition: none;
+}
+
+.backdrop-closed {
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-out 0.1s;
+  animation: close-overlay 0.3s;
 }
 
 .drawer-container {
   position: fixed;
   display: flex;
   flex-direction: column;
+  top: 0;
   right: 0;
   bottom: 0;
   width: 100%;
@@ -22,13 +35,13 @@
   opacity: 0;
 }
 
-.open {
-  z-index: 2;
+.drawer-container-open {
+  z-index: 1;
   opacity: 1;
   transition: opacity 0.3s ease-in 0.1s;
 }
 
-.closed {
+.drawer-container-closed {
   z-index: -1;
   opacity: 0;
   transition: opacity 0.2s ease-out 0.1s;
@@ -66,29 +79,43 @@
 }
 
 @media screen and (min-width: 768px) {
+
+  .backdrop {
+    background-color: rgba(20, 20, 30, 0.5);
+  }
+
+  .backdrop-open {
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.1s;
+  }
+  
+  .backdrop-closed {
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s ease-out 0.1s;
+    animation: close-overlay 0.3s;
+  }
+
   .drawer-container {
     width: 0;
   }
 
-  .open {
+  .drawer-container-open {
     width: 50vw;
-    max-width: 500px;
     transition: none;
-    animation: slide-in 0.2s;
+    animation: slide-in 0.3s;
   }
 
-  .closed {
+  .drawer-container-closed {
     width: 0;
-    animation: slide-out 0.2s;
+    animation: slide-out 0.3s;
   }
   
   @keyframes slide-in {
     0% { 
       width: 0;
     }
-    50% {
-      width: 25vw;
-    }
     100% {
       width: 50vw;
     }
@@ -97,49 +124,63 @@
   @keyframes slide-out {
     0% {
       width: 50vw;
-      z-index: 2;
-    }
-    50% {
-      width: 25vw;
-      z-index: 2;
     }
     100% {
       width: 0;
-      z-index: -1;
     }
   }
 }
 
 @media screen and (min-width: 1024px) {
 
-  .open {
-    width: 40vw;
+  .drawer-container-open {
+    width: 35vw;
   }
 
   @keyframes slide-in {
     0% { 
       width: 0;
     }
-    50% {
-      width: 20vw;
-    }
     100% {
-      width: 40vw;
+      width: 35vw;
     }
   }
 
   @keyframes slide-out {
     0% {
-      width: 40vw;
-      z-index: 2;
-    }
-    50% {
-      width: 20vw;
+      width: 35vw;
       z-index: 2;
     }
     100% {
       width: 0;
-      z-index: -1;
+      z-index: -1
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+  .drawer-container-open {
+    width: 30vw;
+  }
+
+  @keyframes slide-in {
+    0% { 
+      width: 0;
+    }
+    100% {
+      width: 30vw;
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      width: 30vw;
+      z-index: 2;
+    }
+    100% {
+      width: 0;
+      z-index: -1
     }
   }
 }
