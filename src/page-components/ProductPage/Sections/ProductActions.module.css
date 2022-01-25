@@ -10,7 +10,6 @@
   font-size: 1.15rem;
   margin: 0 10px;
   padding: 0 0.5rem;
-  border: 1px solid black;
 }
 
 .quantity-button {
@@ -21,6 +20,7 @@
   height: 1.625rem;
   padding: 0;
   border: 1px solid #141421;
+  cursor: pointer;
 }
 
 .quantity-button:active {

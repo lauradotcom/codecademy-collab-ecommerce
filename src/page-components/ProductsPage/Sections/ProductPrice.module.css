@@ -7,11 +7,14 @@
 }
 
 .price {
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .discount-price {
-  color: gray;
+  color: #A6A6B9;
   text-decoration: line-through;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 1rem;
 }

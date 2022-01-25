@@ -8,11 +8,11 @@ import CartProducts from "../../components/Layout/CartDrawer/Sections/CartProduc
 import EmptyCartMessage from "../../components/Layout/CartDrawer/Sections/EmptyCartMessage";
 //
 import * as styles from "./index.module.css";
-
+import { navigate } from "gatsby";
 
 const CheckoutPage = () => {
   const cart = useSelector(cartSelector);
-  const [page, setPage] = useState('Information');
+  const [page, setPage] = useState("Information");
   const [inputs, setInputs] = useState({
     contactInfo: "",
     firstName: "",
@@ -24,10 +24,9 @@ const CheckoutPage = () => {
     state: "",
     zipCode: "",
     phone: "",
-    shipping: ""
+    shipping: "",
   });
 
- 
   const Breadcrumb = () => {
     return (
       <div className={styles.breadcrumb}>
@@ -59,26 +58,26 @@ const CheckoutPage = () => {
         </span>
       </div>
     );
-  }
+  };
 
-  
   const [content, setContent] = useState(
-    <Form inputs={inputs} setInputs={setInputs} setPage={setPage}/>
+    <Form inputs={inputs} setInputs={setInputs} setPage={setPage} />
   );
   useEffect(() => {
-    if (page === 'Information') {
-      document.title = 'Checkout';
-      setContent(<Form inputs={inputs} setInputs={setInputs} setPage={setPage}/>);
-    } else if (page === 'Shipping') {
-      document.title = 'Shipping';
+    if (page === "Information") {
+      document.title = "Checkout";
+      setContent(
+        <Form inputs={inputs} setInputs={setInputs} setPage={setPage} />
+      );
+    } else if (page === "Shipping") {
+      document.title = "Shipping";
       setContent(
         <Shipping inputs={inputs} setInputs={setInputs} setPage={setPage} />
       );
     } else {
-      document.title = 'Checkout';
+      document.title = "Checkout";
     }
-  }, [page, inputs])
-  
+  }, [page, inputs]);
 
   return (
     <main className={styles.main}>
@@ -86,7 +85,7 @@ const CheckoutPage = () => {
         <Breadcrumb />
         {content}
       </section>
-      <div className={styles.separator}/>
+      <div className={styles.separator} />
       <section className={styles.sectionTwo}>
         <h1>Order summary</h1>
         {cart.totalQuantity > 0 ? (
@@ -94,22 +93,22 @@ const CheckoutPage = () => {
             <CartProducts products={cart.items} />
             <div className={styles.hSeparator} />
             <div className={styles.subtotalContainer}>
-            
               <div>
                 <span className={styles.subL}>Subtotal:</span>
-                <span className={styles.subR}>${cart.totalPrice.toFixed(2)}</span>
+                <span className={styles.subR}>
+                  ${cart.totalPrice.toFixed(2)}
+                </span>
               </div>
               <div>
                 <span className={styles.subL}>Shipping:</span>
                 <span className={styles.subR}>Calculated at next step</span>
               </div>
-            
             </div>
           </>
         ) : (
-          <EmptyCartMessage />
+          <EmptyCartMessage closeCart={() => navigate("/products")} />
         )}
-        <div className={styles.hSeparator}/>
+        <div className={styles.hSeparator} />
         <div className={styles.totalPriceContainer}>
           <p className={styles.total}>Total:</p>
           <p className={styles.finalPrice}>${cart.totalPrice.toFixed(2)}</p>
@@ -117,6 +116,6 @@ const CheckoutPage = () => {
       </section>
     </main>
   );
-}
+};
 
 export default CheckoutPage;

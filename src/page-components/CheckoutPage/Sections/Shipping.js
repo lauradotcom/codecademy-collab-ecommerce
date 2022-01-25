@@ -26,9 +26,8 @@ const Shipping = ({ inputs, setPage, setInputs }) => {
       alert(message);
       return;
     }
-    setPage("Information");
-    dispatch(clearItems());
     navigate("/checkout/order/", { replace: true });
+    dispatch(clearItems());
   };
 
   return (

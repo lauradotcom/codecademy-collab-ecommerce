@@ -31,8 +31,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 .product-name {
   margin-bottom: 0;
+  text-decoration: none;
+  color: #141421;
 }

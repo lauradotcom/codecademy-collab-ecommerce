@@ -17,7 +17,11 @@ const CartDrawer = ({ closeCart, showCart }) => {
 
   return (
     <div 
-      className={styles.root} 
+      className={
+        showCart
+        ? `${styles.backdrop} ${styles.backdropOpen}`
+        : `${styles.backdrop} ${styles.backdropClosed}`
+      } 
       onClick={closeCart}
       onKeyPress={closeCart}
       aria-hidden="true"
@@ -25,8 +29,8 @@ const CartDrawer = ({ closeCart, showCart }) => {
       <div 
         className={
           showCart
-          ? `${styles.drawerContainer} ${styles.open}`
-          : `${styles.drawerContainer} ${styles.closed}`
+          ? `${styles.drawerContainer} ${styles.drawerContainerOpen}`
+          : `${styles.drawerContainer} ${styles.drawerContainerClosed}`
         } 
         onClick={e => e.stopPropagation()}
         onKeyPress={e => e.stopPropagation()}
