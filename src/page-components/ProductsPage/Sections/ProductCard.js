@@ -16,8 +16,8 @@ const ProductCard = ({ product }) => {
         />
       </Link>
       <div className={styles.detailsActions}>
-        <Link to={`/products/${product.productId}`}>
-          <h2 className={styles.productName}>{product.name}</h2>
+        <Link className={styles.productName} to={`/products/${product.productId}`}>
+          <h2>{product.name}</h2>
         </Link>
         <ProductPrice product={product} />
       </div>
