@@ -20,15 +20,10 @@
   </a>
 </p>
 
-<p align="center">
-  <a href="">Demo
-  </a>
-
-</p>
-
 ---
-
 > 🛍️ 🛒 Simple E-Commerce starter built on Gatsby framework with Redux Toolkit and session persistent shopping cart managed in local storage 🛍️ 🛒
+
+> Live demo [_here_](https://codecademyecommstore.netlify.app/).
 
 Statically generated Gatsby E-Commerce web app with page for viewing all products and individual programmatically created product pages. GraphQL queries against local filesystem data store for product information and dynamic routing/programmatic page generation.
 
@@ -112,3 +107,9 @@ The folder [/src/state](https://github.com/lauradotcom/codecademy-collab-ecommer
    <br/><br/>
 
 ---
+## Acknowledgements
+This project was as part of a Beta [Codecademy](https://www.codecademy.com/) Collaboration Project
+
+---
+## Contact
+Created by [BusterCodes](hhttps://github.com/BusterCodes), [lauradotcom](https://github.com/lauradotcom), [CxrlosKenobi](https://github.com/CxrlosKenobi), and [ChrisDeCleene](https://github.com/ChrisDeCleene) - feel free to contact us!
