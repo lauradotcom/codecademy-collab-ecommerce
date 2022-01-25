@@ -5,13 +5,13 @@ import * as styles from "./ProductPrice.module.css";
 const ProductPrice = ({ product }) => {
   return (
     <div className={styles.pricesContainer}>
-      <h2 className={styles.price}>
+      <span className={styles.price}>
         {product.discount > 0
           ? formatPrice(product.price * (1 - product.discount))
           : formatPrice(product.price)}
-      </h2>
+      </span>
       {product.discount > 0 && (
-        <h2 className={styles.discountPrice}>{formatPrice(product.price)}</h2>
+        <span className={styles.discountPrice}>{formatPrice(product.price)}</span>
       )}
     </div>
   );
