@@ -115,9 +115,6 @@
     0% { 
       width: 0;
     }
-    50% {
-      width: 25vw;
-    }
     100% {
       width: 50vw;
     }
@@ -126,10 +123,6 @@
   @keyframes slide-out {
     0% {
       width: 50vw;
-      z-index: 2;
-    }
-    50% {
-      width: 25vw;
       z-index: 2;
     }
     100% {
@@ -149,9 +142,6 @@
     0% { 
       width: 0;
     }
-    50% {
-      width: 15vw;
-    }
     100% {
       width: 30vw;
     }
@@ -160,10 +150,6 @@
   @keyframes slide-out {
     0% {
       width: 30vw;
-      z-index: 2;
-    }
-    50% {
-      width: 15vw;
       z-index: 2;
     }
     100% {
